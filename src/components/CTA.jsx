@@ -5,8 +5,16 @@ import { selectArabic } from '../slices/infoSlice';
 function CTA({ title, image1, image2, image3, image4 }) {
 
     
-    const arabic = useSelector(selectArabic); 
+  const arabic = useSelector(selectArabic); 
 
+  const idText = arabic ? "معالج ماسي لتكنولوجيا المعلومات" : "IT Diamond processor";
+  const abIdpText = arabic ? "لقد تطور العالم الرقمي بشكل سريع وطغى على جميع جوانب الحياة ، وأصبحت التكنولوجيا شريانًا أساسيًا في عصرنا ، ونحن في مؤسسة معالج الألماس لتكنولوجيا المعلومات ، نسعى إلى تحقيق طموحاتك الرقمية باحترافية عالية وبيد سعودية قادرة ، لنخلق لك من طموحات التكنولوجيا التي تحتضن السماء" : "The digital world has developed rapidly and has overwhelmed all aspects of life and technology has become a fundamental artery in our time, and we at the Diamond Processor Foundation for Information Technology, seek to achieve your digital ambitions with high professionalism and with a capable Saudi hand, to create for you from technology ambitions that embrace the sky"
+ 
+  const Live = arabic ? "تعديلات حية" : "Live modifications";
+  const design = arabic ? "تصاميم استباقية" : "Proactive Designs";
+  const support = arabic ? "دعم 24/24" : "support";
+  const time = arabic ? "نصائح مجانية لتحسين وقت العمل" : "Free tips to improve work time";
+  
   return (
     
    
@@ -19,10 +27,10 @@ function CTA({ title, image1, image2, image3, image4 }) {
                     {title}
                 </p>
                 <h4 class="mt-2 text-2xl leading-8 font-extrabold text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
-                    Diamond Processor
+                   {idText}
                 </h4>
                 <p class="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
-                The digital world has developed rapidly and has overwhelmed all aspects of life and technology has become a fundamental artery in our time, and we at the Diamond Processor Foundation for Information Technology, seek to achieve your digital ambitions with high professionalism and with a capable Saudi hand, to create for you from technology ambitions that embrace the sky.
+                {abIdpText}
                 </p>
               </div>
                 <ul class="mt-8 md:grid md:grid-cols-2 gap-6">
@@ -35,7 +43,7 @@ function CTA({ title, image1, image2, image3, image4 }) {
                                 </svg>
                             </span>
                             <span class={arabic ? "mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
-                                Live modifications
+                             {Live}
                             </span>
                         </div>
                     </li>
@@ -48,7 +56,7 @@ function CTA({ title, image1, image2, image3, image4 }) {
                                 </svg>
                             </span>
                             <span class={arabic ? "mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
-                               Proactive Designs
+                               {design}
                             </span>
                         </div>
                     </li>
@@ -61,7 +69,7 @@ function CTA({ title, image1, image2, image3, image4 }) {
                                 </svg>
                             </span>
                             <span class={arabic ? "mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
-                                24/24 support
+                              {support}
                             </span>
                         </div>
                     </li>
@@ -74,7 +82,7 @@ function CTA({ title, image1, image2, image3, image4 }) {
                                 </svg>
                             </span>
                             <span class={arabic ? "mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
-                                Free tips to improve work time
+                               {time}
                             </span>
                         </div>
                     </li>

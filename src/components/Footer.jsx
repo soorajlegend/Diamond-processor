@@ -8,6 +8,9 @@ import { selectArabic } from '../slices/infoSlice';
 export default function Footer() {
 
   const arabic = useSelector(selectArabic); 
+
+    const idText = arabic ? "معالج ماسي لتكنولوجيا المعلومات — 2020 ©" : "© 2020IT — Diamond processor";
+
    
     return (
   
@@ -19,9 +22,9 @@ export default function Footer() {
         <div className={arabic ? 'relative z-auto flex  flex-row-reverse' : 'relative z-auto flex  flex-row'}>
         <a class={arabic ? "flex flex-row-reverse title-font font-medium  md:justify-start justify-center text-gray-900" : "flex flex-row title-font font-medium  md:justify-start justify-center text-gray-900"}>
          <img src={Logo} alt="" className='w-52' />
-          <span class="ml-3 text-xl text-gray-100 dark-text-800 dark:text-white animate-pulse">Diamond Processor</span>
+          <span class="ml-3 text-xl text-gray-100 dark-text-800 dark:text-white animate-pulse">{idText}</span>
         </a>
-        <p class={arabic ? "text-sm text-gray-100 dark-text-800 dark:text-white sm:ml-4 sm:pr-4 sm:border-r-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4" : "text-sm text-gray-100 dark-text-800 dark:text-white sm:ml-4 sm:pl-4 sm:border-l-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4"}>© 2020 diamond processor —
+        <p class={arabic ? "text-sm text-gray-100 dark-text-800 dark:text-white sm:ml-4 sm:pr-4 sm:border-r-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4" : "text-sm text-gray-100 dark-text-800 dark:text-white sm:ml-4 sm:pl-4 sm:border-l-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4"}> {idText}
           <a href="https://twitter.com/knyttneve" class="text-gray-100 dark-text-800 dark:text-white ml-1" rel="noopener noreferrer" target="_blank">@salem.sa</a>
         </p>
         </div>

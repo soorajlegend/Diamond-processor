@@ -6,6 +6,10 @@ export const Gallery = ({ galleryImages }) => {
 
   const arabic = useSelector(selectArabic); 
 
+  const abIdpText = arabic ? "لقد تطور العالم الرقمي بشكل سريع وطغى على جميع جوانب الحياة ، وأصبحت التكنولوجيا شريانًا أساسيًا في عصرنا ، ونحن في مؤسسة معالج الألماس لتكنولوجيا المعلومات ، نسعى إلى تحقيق طموحاتك الرقمية باحترافية عالية وبيد سعودية قادرة ، لنخلق لك من طموحات التكنولوجيا التي تحتضن السماء" : "The digital world has developed rapidly and has overwhelmed all aspects of life and technology has become a fundamental artery in our time, and we at the Diamond Processor Foundation for Information Technology, seek to achieve your digital ambitions with high professionalism and with a capable Saudi hand, to create for you from technology ambitions that embrace the sky";
+
+  const gallery = arabic ? "عرض المعرض" : "View gallery";
+
     return (
       <div className="relative z-20 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className={arabic ? "flex flex-col mb-6 lg:justify-start lg:flex-row md:mb-8" : "flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8"}>
@@ -13,7 +17,7 @@ export const Gallery = ({ galleryImages }) => {
             <div className="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100" />
           </h2>
           <p className={arabic ? "text-gray-700 text-right lg:text-sm lg:max-w-md" : "text-gray-700 lg:text-sm lg:max-w-md"}>
-            "The digital world has developed rapidly and has overwhelmed all aspects of life and technology has become a fundamental artery in our time, and we at the Diamond Processor Foundation for Information Technology, seek to achieve your digital ambitions with high professionalism and with a capable Saudi hand, to create for you from technology ambitions that embrace the sky.
+            {"\"" + abIdpText}
           </p>
         </div>
         <div className="grid gap-6 row-gap-5 order-last  mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
@@ -27,8 +31,8 @@ export const Gallery = ({ galleryImages }) => {
                  alt={item.image}
                />
                <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                 <p className="mb-4 text-lg font-bold text-gray-100">{item.title}</p>
-                 <p className="text-sm tracking-wide text-gray-300">{item.description}
+                 <p className={arabic ? "mb-4 text-lg font-bold text-right text-gray-100" : "mb-4 text-lg font-bold text-gray-100"}>{item.title}</p>
+                 <p className={arabic ? "text-sm tracking-wide text-gray-300 text-right" : "text-sm tracking-wide text-gray-300"}>{item.description}
                  </p>
                </div>
              </div>
@@ -41,7 +45,7 @@ export const Gallery = ({ galleryImages }) => {
             aria-label=""
             className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
           >
-            View gallery
+            {gallery}
             <svg
               className="inline-block w-3 ml-2"
               fill="currentColor"

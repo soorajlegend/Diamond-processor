@@ -5,14 +5,34 @@ import { selectArabic } from '../slices/infoSlice';
 function ContactForm() {
 
     const arabic = useSelector(selectArabic); 
+
+    const title = arabic ? "اتصل بنا للمزيد" : "Contact Us For More Info";
+
+    const address = arabic ? "المعالج الماسي لتقنية المعلومات سعد بن ثلبه ، الرياض 13338 ، المملكة العربية السعودية" : "Diamond Processor for Information Technology Saad bin Thalabah, Riyadh 13338, Kingdom of Saudi Arabia"
     
+    const follow = arabic ? "تابعنا" : "follow us";
+
+    const formTitle = arabic ? "ماذا تريد أن تسأل" : "What do you want to ask";
+
+    const name = arabic ? "الاسم الكامل" : "Full Name";
+
+    const email = arabic ? "عنوان البريد الالكترونى" : "Email address";
+
+    const placeholder = arabic ? "سوراج محمد" : "Suraj Muhammad";
+
+    const message = arabic ? "رسالة" : "Message";
+
+    const BtnTitle = arabic ? "إرسال" : "submit"
+
+
+
   return (
     <section class="bg-white md:px-52 dark:bg-gray-900">
     <div class="container px-6 py-12 mx-auto">
         <div class={arabic ? "lg:flex md:flex-row-reverse lg:items-center lg:-mx-6" : "lg:flex lg:items-center lg:-mx-6"}>
             <div class={arabic ? "lg:w-1/2 lg:mx-6 text-right" : "lg:w-1/2 lg:mx-6 text-left"}>
-                <h1 class="text-3xl font-semibold text-gray-800 capitalize dark:text-white lg:text-5xl">
-                    Contact us for <br /> more info
+                <h1 class={arabic ? "text-3xl text-right font-semibold text-gray-800 capitalize dark:text-white lg:text-5xl" : "text-3xl w-[70%] font-semibold text-gray-800 capitalize dark:text-white lg:text-5xl"}>
+                    {title}
                 </h1>
 
                 <div class="mt-6 space-y-8 md:mt-8">
@@ -23,8 +43,7 @@ function ContactForm() {
                         </svg>
 
                         <span class="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">
-                            Cecilia Chapman 711-2880 Nulla
-                            St. Mankato Mississippi 96522
+                          {address}
                         </span>
                     </p>
 
@@ -33,7 +52,7 @@ function ContactForm() {
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                         </svg>
 
-                        <span class="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">(257) 563-7401</span>
+                        <span class="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">+966540544246</span>
                     </p>
 
                     <p class={arabic ? "flex flex-row-reverse items-start -mx-2" : "flex items-start -mx-2"}>
@@ -41,12 +60,12 @@ function ContactForm() {
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                         </svg>
 
-                        <span class="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">acb@example.com</span>
+                        <span class="mx-2 text-gray-700 truncate w-72 dark:text-gray-400">salem@idp.sa</span>
                     </p>
                 </div>
 
                 <div class={arabic ? "mt-6 md:mt-8 w-full text-right" :  "mt-6 md:mt-8 w-full text-left"}>
-                    <h3 class="text-gray-600 dark:text-gray-300 ">Follow us</h3>
+                    <h3 class="text-gray-600 dark:text-gray-300 ">{follow}</h3>
 
                     <div class={arabic ? "flex flex-row-reverse mt-4 -mx-1.5 " : "flex mt-4 -mx-1.5 "}>
                         <a class="mx-1.5 dark:hover:text-green-400 text-gray-400 transition-colors duration-300 transform hover:text-green-500" href="#">
@@ -81,26 +100,26 @@ function ContactForm() {
             <div class="mt-8 lg:w-1/2 lg:mx-6">
                 <div
                     class="w-full px-8 py-10 mx-auto overflow-hidden bg-white rounded-lg shadow-2xl dark:bg-gray-900 lg:max-w-xl shadow-gray-300/50 dark:shadow-black/50">
-                    <h1 class="text-lg font-medium text-gray-700">What do you want to ask</h1>
+                    <h1 class={arabic ? "text-lg font-medium text-gray-700 text-right" : "text-lg font-medium text-gray-700"}>{formTitle}</h1>
 
-                    <form class="mt-6">
+                    <form class={arabic ? "mt-6 text-right" : "mt-6"}>
                         <div class="flex-1">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full Name</label>
-                            <input type="text" placeholder="John Doe" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{name}</label>
+                            <input type="text" placeholder={name} class={arabic ? "block w-full text-right px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" : "block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"} />
                         </div>
 
                         <div class="flex-1 mt-6">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
-                            <input type="email" placeholder="johndoe@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" />
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{email}</label>
+                            <input type="email" placeholder="johndoe@example.com" class={arabic ? "block w-full text-right px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" : "block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"} />
                         </div>
 
                         <div class="w-full mt-6">
-                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Message</label>
-                            <textarea class="block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" placeholder="Message"></textarea>
+                            <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">{message}</label>
+                            <textarea class={arabic ? "block w-full h-32 px-5 py-3 mt-2 text-right text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" : "block w-full h-32 px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md md:h-48 dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"} placeholder={message}></textarea>
                         </div>
 
                         <button class="w-full px-6 py-3 mt-6 text-sm font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-gradient-to-b from-green-400 to-green-900 rounded-md hover:bg-green-400 focus:outline-none focus:ring focus:ring-green-300 focus:ring-opacity-50">
-                            get in touch
+                            {BtnTitle}
                         </button>
                     </form>
                 </div>

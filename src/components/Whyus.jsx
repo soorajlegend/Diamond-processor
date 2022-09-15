@@ -10,6 +10,28 @@ function Whyus() {
 
   const arabic = useSelector(selectArabic);
 
+
+  const WhyUs = arabic ? "لماذا نحن" : "Why Us";
+
+  const DesignTitle = arabic ? "التصميم" : "The design";
+
+  const DesignText = arabic ? "نصمم وفقًا لاحتياجاتك بناءً على أفضل المعايير الفنية" : " We design according to your needs based on the best technical standards.";
+
+  const DevelopmentTitle = arabic ? "تطوير" : "Development";
+
+  const DevelopmentText= arabic ? "يقوم فريق التطوير لدينا بتطوير النظام وتحقيق أقصى قدر من المرونة" : "Our development team develops the system and achieves the maximum flexibility.";
+
+  const EmpowermentTitle = arabic ? "التمكين" : "Empowerment";
+  
+  const EmpowermentText = arabic ? "يتم تسليم العينات بأعلى المواصفات الفنية مع إدارة الوقت" : "The samples are delivered with the highest technical specification with time management";
+
+//   const VissionText = arabic ? "" : "";
+//   const VissionText = arabic ? "" : "";
+//   const VissionText = arabic ? "" : "";
+//   const VissionText = arabic ? "" : "";
+//   const VissionText = arabic ? "" : "";
+
+
   return (
     <>
  {/* Why dp section */}
@@ -17,7 +39,7 @@ function Whyus() {
  <div className="bg-gray-50 w-[95%] text-gray-700 mt-10 pt-10 dark:bg-gray-900/100 dark:text-gray-200 3s ease-in-out">
                 <div className="w-full p-10 mt-10 flex justify-center item-center flex-column">
                     <div className="sm:w-full md:w-1/2 block justify-center item-center">
-                        <h2 className="md:text-5xl sm:text-2xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center" >Why us</h2>
+                        <h2 className="md:text-5xl sm:text-2xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center" >{WhyUs}</h2>
                     </div>
 
                 </div>
@@ -39,10 +61,10 @@ function Whyus() {
                                         </div>
                                         <div className={arabic ? "ml-4 text-right mx-5" : "ml-4 "}>
                                             <h5 className="text-lg leading-6  text-gray-900 dark:text-white font-bold">
-                                               The Design
+                                               {DesignTitle}
                                             </h5>
                                             <p className="mt-2 text-base leading-6 text-gray-500 dark:text-gray-300">
-                                            We design according to your needs based on the best technical standards.
+                                           {DesignText}
                                             </p>
                                         </div>
                                     </div>
@@ -59,10 +81,10 @@ function Whyus() {
                                         </div>
                                         <div className={arabic ? "ml-4 text-right mx-5" : "ml-4 "}>
                                             <h5 className="text-lg leading-6 text-gray-900 dark:text-white font-bold">
-                                                Development
+                                               {DevelopmentTitle}
                                             </h5>
                                             <p className="mt-2 text-base leading-6 text-gray-500 dark:text-gray-300">
-                                            Our development team develops the system and achieves the maximum flexibility.
+                                            {DevelopmentText}
                                             </p>
                                         </div>
                                     </div>
@@ -77,10 +99,10 @@ function Whyus() {
                                         </div>
                                         <div className={arabic ? "ml-4 text-right mx-5" : "ml-4 "}>
                                             <h5 className="text-lg leading-6 text-gray-900 dark:text-white font-bold">
-                                                Empowerment
+                                                {EmpowermentTitle}
                                             </h5>
                                             <p className="mt-2 text-base leading-6 text-gray-500 dark:text-gray-300">
-                                            The samples are delivered with the highest technical specification with time management
+                                            {EmpowermentText}
                                             </p>
                                         </div>
                                     </div>

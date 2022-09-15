@@ -4,9 +4,16 @@ import { selectArabic } from '../slices/infoSlice';
 
 function Customers() {
 
-  const arabic = useSelector(selectArabic); 
+  const arabic = useSelector(selectArabic);
+
+  const title = arabic ? "نحن نعمل مع أفضل الشركاء" : "We Work with the Best Partners";
+
+  const content = arabic ? "نحن على ثقة من أنه يمكننا إيجاد العملية التي ستساعدك على تحقيق أهدافك" : "We are confident that we can find the process that will help you meet your goals." ;
+
+  const btn = arabic ? "عرض المزيد" : "View more";
 
   return (
+
 
     <>
       <div className="px-4 py-12">
@@ -14,14 +21,13 @@ function Customers() {
           <div className={arabic ? "flex flex-col lg:justify-between lg:flex-row-reverse gap-x-8 gap-y-8" : "flex flex-col lg:justify-between lg:flex-row gap-x-8 gap-y-8"}>
             <div aria-label="text-area" className={arabic ? "mb-7 text-right" : "mb-7 text-left"}>
               <p className="lg:text-4xl text-3xl font-semibold leading-10 text-gray-800 dark:text-gray-400 dark:border-gray-500 mb-4 lg:max-w-[513px] w-full">
-                We Work with the Best Partners
+                {title}
               </p>
               <p className="text-base leading-normal text-gray-800 dark:text-gray-400 dark:border-gray-500 mb-[64px] lg:max-w-[513px] w-full">
-                We are confident that we can find the process that will help you
-                meet your goals.
+               {content}
               </p>
               <button className=" w-full px-4 py-4 text-base font-medium leading-none text-white duration-300 ease-in-out transform bg-gradient-to-b from-green-400 to-green-800 rounded-lg hover:bg-gray-700 lg:max-w-[187px] ">
-                View more
+                {btn}
               </button>
             </div>
             <div className="hidden lg:block md:block">

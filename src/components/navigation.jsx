@@ -25,8 +25,16 @@ export default function Navigation() {
     
     const [active, setActive] = useState('home');
 
+    const homeText = arabic ? "الصفحة الرئيسية" : "Home";
+    const aboutText = arabic ? "معلومات عنا" : "About us";
+    const servicesText = arabic ? "خدماتنا" : "Our services ";
+    const clientText = arabic ? "عملاؤنا" : "Clients";
+    const contactText = arabic ? "اتصل بنا" : "Contact us";
+    const mail = arabic ? "بريد" : "Mail";
+    const idpText = arabic ? "معالج الماس تكنولوجيا المعلومات" : "IT Diaamond Processor";
+
     useEffect(() => {
-        setLanguage(arabic ? "English" : "Arabic");
+        setLanguage(arabic ? "English language" : "اللغة العربية");
     }, [arabic]);
 
     return (
@@ -56,7 +64,7 @@ export default function Navigation() {
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
                                                     <IoHomeOutline />
                                                 </div>
-                                                <p className="text-green-500 ml-3 text-lg">Home</p>
+                                                <p className="text-green-500 ml-3 text-lg">{homeText}</p>
                                             </div>
                                         </li>
                                     </Link>
@@ -75,7 +83,7 @@ export default function Navigation() {
                                                             />
                                                         </svg>
                                                     </div>
-                                                    <span className="text-gray-700 ml-3 text-lg">About Us</span>
+                                                    <span className="text-gray-700 ml-3 text-lg">{aboutText}</span>
                                                 </div>
                                                 <div onClick={() => setProduct(!product)}>
                                                     {product ? (
@@ -98,8 +106,8 @@ export default function Navigation() {
                                             {product ? (
                                                 <div>
                                                     <ul className="my-3">
-                                                        <li className="text-sm text-gray-500 hover:text-green-500 py-2 px-6">Company</li>
-                                                        <li className="text-sm py-2 px-6">Our Services</li>
+                                                        <li className="text-sm text-gray-500 hover:text-green-500 py-2 px-6">{servicesText}</li>
+                                                        <li className="text-sm py-2 px-6">{servicesText}</li>
                                                         <li className="text-sm text-gray-500 hover:text-green-500 py-2 px-6">Our Client</li>
                                                     </ul>
                                                 </div>
@@ -152,17 +160,6 @@ export default function Navigation() {
                                                     )}
                                                 </div>
                                             </div>
-                                            {deliverables ? (
-                                                <div>
-                                                    <ul className="my-3">
-                                                        <li className="text-sm py-2 px-6">Best Sellers</li>
-                                                        <li className="text-sm text-gray-500 hover:text-green-500 py-2 px-6">Out of Stock</li>
-                                                        <li className="text-sm text-gray-500 hover:text-green-500 py-2 px-6">New Products</li>
-                                                    </ul>
-                                                </div>
-                                            ) : (
-                                                ""
-                                            )}
                                         </li>
                                     </Link>
                                 </ul>
@@ -178,12 +175,12 @@ export default function Navigation() {
                                 <img src={Logo} alt="logo" className="h-10" />
                             </div>
                             <ul className={arabic ? "pr-12 xl:flex  flex-row-reverse items-center  hidden" : "pr-12 xl:flex items-center  hidden"}>
-                                <li className={active === 'home' ? "cursor-pointer h-full flex items-center text-sm text-green-300 tracking-normal pb-4 mr-5 mt-4 border-b-2 border-green-300" : "cursor-pointer h-full flex items-center text-sm text-gray-500 tracking-normal pb-4 mr-5 mt-4" } onClick={() => setActive('home')}><Link to="/">Home</Link></li>
-                                <li className={active === 'about' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm text-gry-800 mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('about')}><Link to="/about">About us</Link></li>
-                                <li className={active === 'services' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm text-gry-800 mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('services')}><Link to="/services" >Our service</Link></li>
-                                <li className={active === 'clients' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm  mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('clients')}><Link to="/clients">Clients</Link></li>
-                                <li className={active === 'contact' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm  mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('contact')}><Link to="/contact">Contact us</Link></li>
-                                <li className={active === 'login' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('login')}><Link to="/login">Mail</Link></li>
+                                <li className={active === 'home' ? "cursor-pointer h-full flex items-center text-sm text-green-300 tracking-normal pb-4 mr-5 mt-4 border-b-2 border-green-300" : "cursor-pointer h-full flex items-center text-sm text-gray-500 tracking-normal pb-4 mr-5 mt-4" } onClick={() => setActive('home')}><Link to="/">{homeText}</Link></li>
+                                <li className={active === 'about' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm text-gry-800 mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('about')}><Link to="/about">{aboutText}</Link></li>
+                                <li className={active === 'services' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm text-gry-800 mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('services')}><Link to="/services" >{servicesText}</Link></li>
+                                <li className={active === 'clients' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm  mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('clients')}><Link to="/clients">{clientText}</Link></li>
+                                <li className={active === 'contact' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm  mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('contact')}><Link to="/contact">{contactText}</Link></li>
+                                <li className={active === 'login' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('login')}><Link to="/login">{mail}</Link></li>
                             </ul>
 
                         </div>
@@ -231,7 +228,7 @@ export default function Navigation() {
                                         </svg>
                                     </Link>
                                     </li>
-                                    <li className="flex justify-center item-center mx-2 rounded-lg shadow-lg py-1.5 px-3 pointer animate-pulse bg-gradient-to-b from-green-400 to-green-800 hover:bg-gradient-to-r text-white dark:text-gray-400 hover:from-green-400 hover:to-green-800 hover:-skew-x-3 hover:-rotate-3 3s ease-in" onClick={changeLanguage}>{language}</li>
+                                    <li className="flex justify-center item-center mx-2 rounded-lg shadow-lg py-1.5 px-3 pointer animate-pulse bg-gradient-to-b from-green-400 to-green-800 hover:bg-gradient-to-r text-gray-800 dark:text-gray-100 hover:from-green-400 hover:to-green-800 hover:-skew-x-3 hover:-rotate-3 3s ease-in" onClick={changeLanguage}>{language}</li>
                             </div>
                             </ul>
                             </div>
@@ -257,7 +254,7 @@ export default function Navigation() {
                                             <rect x={4} y={14} width={6} height={6} rx={1} />
                                             <rect x={14} y={14} width={6} height={6} rx={1} />
                                         </svg>
-                                        <span className="ml-2">Home</span>
+                                        <span className="ml-2">{homeText}</span>
                                     </div>
                                 </li>
                                 <li className="flex xl:hidden  cursor-pointer text-gray-600 text-sm leading-3 tracking-normal mt-2 py-2 hover:text-green-300 focus:text-green-300 focus:outline-none items-center relative">
