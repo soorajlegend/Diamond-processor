@@ -18,7 +18,6 @@ import Contact from "./screens/Contact";
 import Login from "./screens/Login";
 import Space from "./components/Space";
 import { AnimatePresence } from "framer-motion";
-import {RemoveScrollBar} from 'react-remove-scroll-bar';
 
 
 
@@ -27,7 +26,6 @@ export default function App() {
 
   return (
     <Suspense fallback={null}> 
-    <RemoveScrollBar />
     <Navigation />
         <Space />
       <AnimatePresence exitBeforeEnter>
