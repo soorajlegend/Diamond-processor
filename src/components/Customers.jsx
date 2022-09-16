@@ -18,15 +18,15 @@ function Customers() {
     <>
       <div className="px-4 py-12">
         <div className="lg:max-w-[1440px] md:max-w-[744px] max-w-[375px] w-full  py-12 lg:px-10  md:px-6 px-4 bg-white dark:bg-gray-900/100 shadow-lg rounded-lg mx-auto">
-          <div className={arabic ? "flex flex-col lg:justify-between lg:flex-row-reverse gap-x-8 gap-y-8" : "flex flex-col lg:justify-between lg:flex-row gap-x-8 gap-y-8"}>
-            <div aria-label="text-area" className={arabic ? "mb-7 text-right" : "mb-7 text-left"}>
-              <p className="lg:text-4xl text-3xl font-semibold leading-10 text-gray-800 dark:text-gray-400 dark:border-gray-500 mb-4 lg:max-w-[513px] w-full">
+          <div className={arabic ? "arabic-text flex flex-col lg:justify-between lg:flex-row-reverse gap-x-8 gap-y-8" : "flex flex-col lg:justify-between lg:flex-row gap-x-8 gap-y-8"}>
+            <div aria-label="text-area" className={arabic ? "arabic-text mb-7 text-right" : "mb-7 text-left"}>
+              <p className={arabic ? "arabic-text lg:text-4xl text-3xl font-semibold leading-10 text-gray-800 dark:text-gray-400 dark:border-gray-500 mb-4 lg:max-w-[513px] w-full" : "lg:text-4xl text-3xl font-semibold leading-10 text-gray-800 dark:text-gray-400 dark:border-gray-500 mb-4 lg:max-w-[513px] w-full"}>
                 {title}
               </p>
-              <p className="text-base leading-normal text-gray-800 dark:text-gray-400 dark:border-gray-500 mb-[64px] lg:max-w-[513px] w-full">
+              <p className={arabic ? "arabic-text text-base leading-normal text-gray-800 dark:text-gray-400 dark:border-gray-500 mb-[64px] lg:max-w-[513px] w-full" : "text-base leading-normal text-gray-800 dark:text-gray-400 dark:border-gray-500 mb-[64px] lg:max-w-[513px] w-full"}>
                {content}
               </p>
-              <button className=" w-full px-4 py-4 text-base font-medium leading-none text-white duration-300 ease-in-out transform bg-gradient-to-b from-green-400 to-green-800 rounded-lg hover:bg-gray-700 lg:max-w-[187px] ">
+              <button className={arabic ? "arabic-text  w-full px-4 py-4 text-base font-medium leading-none text-white duration-300 ease-in-out transform bg-gradient-to-b from-green-400 to-green-800 rounded-lg hover:bg-gray-700 lg:max-w-[187px] " : " w-full px-4 py-4 text-base font-medium leading-none text-white duration-300 ease-in-out transform bg-gradient-to-b from-green-400 to-green-800 rounded-lg hover:bg-gray-700 lg:max-w-[187px] "}>
                 {btn}
               </button>
             </div>

@@ -27,30 +27,30 @@ function Form() {
         <div className="flex flex-col justify-center flex-1 px-4 py-12 overflow-hidden sm:px-6 lg:flex-none lg:px-20 xl:px-24">
             <div className="w-full max-w-xl mx-auto lg:w-96">
                 <div>
-                    <h2 className={arabic ? "mt-6 text-3xl font-extrabold text-right text-gray-600" :"mt-6 text-3xl font-extrabold text-left text-gray-600"}>{title}</h2>
+                    <h2 className={arabic ? "arabic-text mt-6 text-3xl font-extrabold text-right text-gray-600" :"mt-6 text-3xl font-extrabold text-left text-gray-600"}>{title}</h2>
                 </div>
 
                 <div className="mt-8">
                     <div className="mt-6">
                         <form action="#" method="POST" className="space-y-6">
                             <div>
-                                <label htmlFor="email" className={arabic ? "block text-sm font-medium text-right text-gray-600" : "block text-sm font-medium text-gray-600"}>{email} </label>
+                                <label htmlFor="email" className={arabic ? "arabic-text block text-sm font-medium text-right text-gray-600" : "block text-sm font-medium text-gray-600"}>{email} </label>
                                 <div className="mt-1">
-                                    <input id="email" name="email" type="email" autoComplete="email" required="" placeholder={emailPlh} className={arabic ? "block w-full text-right px-5 py-3 text-base text-gray-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-100 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" : "block w-full px-5 py-3 text-base text-gray-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-100 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"} />
+                                    <input id="email" name="email" type="email" autoComplete="email" required="" placeholder={emailPlh} className={arabic ? "arabic-text block w-full text-right px-5 py-3 text-base text-gray-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-100 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" : "block w-full px-5 py-3 text-base text-gray-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-100 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"} />
                                 </div>
                             </div>
 
                             <div className="space-y-1">
-                                <label htmlFor="password" className={arabic ? "block text-sm text-right font-medium text-gray-600" :"block text-sm font-medium text-gray-600"}> {password} </label>
+                                <label htmlFor="password" className={arabic ? "arabic-text block text-sm text-right font-medium text-gray-600" :"block text-sm font-medium text-gray-600"}> {password} </label>
                                 <div className="mt-1">
-                                    <input id="password" name="password" type="password" autoComplete="current-password" required="" placeholder={passwordPlh} className={arabic ? "block w-full text-right px-5 py-3 text-base text-gray-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-100 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" : "block w-full px-5 py-3 text-base text-gray-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-100 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"} />
+                                    <input id="password" name="password" type="password" autoComplete="current-password" required="" placeholder={passwordPlh} className={arabic ? "arabic-text block w-full text-right px-5 py-3 text-base text-gray-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-100 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300" : "block w-full px-5 py-3 text-base text-gray-600 placeholder-gray-300 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-100 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-300"} />
                                 </div>
                             </div>
 
-                            <div className={arabic ? "flex items-center flex-row-reverse justify-between" : "flex items-center justify-between"}>
-                                <div className={arabic ? "flex flex-row-reverse justify-between items-center" : "flex       justify-between items-center"}>
+                            <div className={arabic ? "arabic-text flex items-center flex-row-reverse justify-between" : "flex items-center justify-between"}>
+                                <div className={arabic ? "arabic-text flex flex-row-reverse justify-between items-center" : "flex       justify-between items-center"}>
                                     <input id="remember-me" name="remember-me" type="checkbox" placeholder="Your password" className="w-4 h-4 text-green-600 dark:bg-gray-800 border-gray-200 rounded focus:ring-green-500" />
-                                    <label htmlFor="remember-me" className={arabic ? "block mr-2 text-sm text-gray-600" : "block ml-2 text-sm text-gray-600"}>{Remember}</label>
+                                    <label htmlFor="remember-me" className={arabic ? "arabic-text block mr-2 text-sm text-gray-600" : "block ml-2 text-sm text-gray-600"}>{Remember}</label>
                                 </div>
 
                                 <div className="text-sm">

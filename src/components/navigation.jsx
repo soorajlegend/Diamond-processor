@@ -43,7 +43,7 @@ export default function Navigation() {
                         <div className="flex flex-col justify-between h-full">
                             <div className="px-6 pt-4  w-full min-h-screen bg-white dark:bg-gray-900/100 shadow-lg">
                                 <div className="flex items-center justify-between">
-                                    <div className={arabic ? "flex flex-row-reverse items-center" : "flex items-center"}>
+                                    <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                         <img src={Logo} alt="logo2" className="h-8" />
                                     </div>
                                     <div id="cross" className="bg-white dark:bg-gray-900/100 text-gray-500" onClick={() => setShow(!show)}>
@@ -57,7 +57,7 @@ export default function Navigation() {
                                 <ul className="f-m-m px-5">
                                     <Link to="/">
                                         <li className="text-gray-500 pt-8 ">
-                                            <div className={arabic ? "flex flex-row-reverse items-center" : "flex items-center"}>
+                                            <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
                                                     <IoHomeOutline />
                                                 </div>
@@ -68,7 +68,7 @@ export default function Navigation() {
 
                                     <Link to="/about">
                                         <li className="text-gray-500 pt-8">
-                                            <div className={arabic ? "flex flex-row-reverse items-center" : "flex items-center"}>
+                                            <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
                                                         <path d="M6.66667 13.3333L8.33334 8.33334L13.3333 6.66667L11.6667 11.6667L6.66667 13.3333Z" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
@@ -82,7 +82,7 @@ export default function Navigation() {
 
                                     <Link to="/services">
                                         <li className="text-gray-500 pt-8">
-                                            <div className={arabic ? "flex flex-row-reverse items-center" : "flex items-center"}>
+                                            <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
                                                         <path d="M6.66667 13.3333L8.33334 8.33334L13.3333 6.66667L11.6667 11.6667L6.66667 13.3333Z" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
@@ -96,7 +96,7 @@ export default function Navigation() {
 
                                     <Link to="/clients">
                                         <li className="text-gray-500 pt-8">
-                                            <div className={arabic ? "flex flex-row-reverse items-center" : "flex items-center"}>
+                                            <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
                                                         <path d="M6.66667 13.3333L8.33334 8.33334L13.3333 6.66667L11.6667 11.6667L6.66667 13.3333Z" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
@@ -110,7 +110,7 @@ export default function Navigation() {
 
                                     <Link to="/contact">
                                         <li className="text-gray-500 pt-8">
-                                            <div className={arabic ? "flex flex-row-reverse items-center" : "flex items-center"}>
+                                            <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
                                                         <path d="M6.66667 13.3333L8.33334 8.33334L13.3333 6.66667L11.6667 11.6667L6.66667 13.3333Z" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
@@ -125,7 +125,7 @@ export default function Navigation() {
 
                                     <Link to="/login">
                                         <li className="text-gray-500 pt-8">
-                                            <div className={arabic ? "flex flex-row-reverse items-center" : "flex items-center"}>
+                                            <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
                                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
                                                         <path d="M6.66667 13.3333L8.33334 8.33334L13.3333 6.66667L11.6667 11.6667L6.66667 13.3333Z" stroke="currentColor" strokeWidth={1} strokeLinecap="round" strokeLinejoin="round" />
@@ -143,13 +143,13 @@ export default function Navigation() {
                     </div>
                 </div>
                 {/* Mobile */}
-                <nav className={arabic ? "fixed h-auto flex-row-reverse w-full mx-auto z-1 px-10 top-0 bg-white dark:bg-gray-900/100 shadow-lg" : "fixed h-auto w-full mx-auto z-1 px-10 top-0 bg-white dark:bg-gray-900/100 shadow-lg"}>
-                    <div className={arabic ? "container justify-between bg-white dark:bg-gray-900/100 h-16 flex  flex-row-reverse items-center lg:items-stretch mx-auto" : "container justify-between bg-white dark:bg-gray-900/100 h-16 flex items-center lg:items-stretch mx-auto"}>
-                        <div className={arabic ? "bg-white dark:bg-gray-900/100 flex  flex-row-reverse items-center" : "bg-white dark:bg-gray-900/100 flex items-center"}>
-                            <div className={arabic ? "flex flex-row-reverse -mr-[30px] md:-mr-0 md:ml-10 items-center " : "-ml-[30px] md:-ml-0 md:mr-10  flex items-center "}>
+                <nav className={arabic ? "arabic-text fixed h-auto flex-row-reverse w-full mx-auto z-1 px-10 top-0 bg-white dark:bg-gray-900/100 shadow-lg" : "fixed h-auto w-full mx-auto z-1 px-10 top-0 bg-white dark:bg-gray-900/100 shadow-lg"}>
+                    <div className={arabic ? "arabic-text container justify-between bg-white dark:bg-gray-900/100 h-16 flex  flex-row-reverse items-center lg:items-stretch mx-auto" : "container justify-between bg-white dark:bg-gray-900/100 h-16 flex items-center lg:items-stretch mx-auto"}>
+                        <div className={arabic ? "arabic-text bg-white dark:bg-gray-900/100 flex  flex-row-reverse items-center" : "bg-white dark:bg-gray-900/100 flex items-center"}>
+                            <div className={arabic ? "arabic-text flex flex-row-reverse -mr-[30px] md:-mr-0 md:ml-10 items-center " : "-ml-[30px] md:-ml-0 md:mr-10  flex items-center "}>
                                 <img src={Logo} alt="logo" className="h-10" />
                             </div>
-                            <ul className={arabic ? "pr-12 xl:flex  flex-row-reverse items-center  hidden" : "pr-12 xl:flex items-center  hidden"}>
+                            <ul className={arabic ? "arabic-text pr-12 xl:flex  flex-row-reverse items-center  hidden" : "pr-12 xl:flex items-center  hidden"}>
                                 <li className={active === 'home' ? "cursor-pointer h-full flex items-center text-sm text-green-300 tracking-normal pb-4 mr-5 mt-4 border-b-2 border-green-300" : "cursor-pointer h-full flex items-center text-sm text-gray-500 tracking-normal pb-4 mr-5 mt-4"} onClick={() => setActive('home')}><Link to="/">{homeText}</Link></li>
                                 <li className={active === 'about' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm text-gry-800 mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('about')}><Link to="/about">{aboutText}</Link></li>
                                 <li className={active === 'services' ? "cursor-pointer h-full flex items-center text-green-300 border-b-2 border-green-300 pb-4  mt-4 text-sm text-gry-800 mx-5 tracking-normal" : "cursor-pointer h-full flex items-center text-sm text-gray-500 mx-5 tracking-normal"} onClick={() => setActive('services')}><Link to="/services" >{servicesText}</Link></li>
@@ -160,8 +160,8 @@ export default function Navigation() {
 
                         </div>
                         <div className="h-full hidden md:flex justify-center items-center">
-                            <ul className={arabic ? "flex flex-row-reverse justify-center items-center h-full" : "flex  flex-row justify-center right-0 item-center"}>
-                                <div className={arabic ? "flex justify-center flex-row-reverse md:justify-center items-center h-full w-full md:w-auto md:items-center space-x-6 " : "flex justify-center md:justify-center items-center h-full w-full md:w-auto md:items-center space-x-6 "}>
+                            <ul className={arabic ? "arabic-text flex flex-row-reverse justify-center items-center h-full" : "flex  flex-row justify-center right-0 item-center"}>
+                                <div className={arabic ? "arabic-text flex justify-center flex-row-reverse md:justify-center items-center h-full w-full md:w-auto md:items-center space-x-6 " : "flex justify-center md:justify-center items-center h-full w-full md:w-auto md:items-center space-x-6 "}>
                                     <li className="w-10 h-10 mx-2 pointer pt-2  flex justify-center item-center">
                                         <Link to="#Footer" className="text-gray-700 dark:text-white hover:text-green-400 w-6 animate-pulse hover:shadow-lg ">
                                             <svg width={24} height={24} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,7 +209,7 @@ export default function Navigation() {
                         </div>
 
                         <div className="visible xl:hidden flex items-center relative bg-white dark:bg-gray-900/100">
-                            <div className={arabic ? "flex -ml-8 md:ml-0 flex-row-reverse" : "flex -mr-8 md:mr-0"}>
+                            <div className={arabic ? "arabic-text flex -ml-8 md:ml-0 flex-row-reverse" : "flex -mr-8 md:mr-0"}>
                                 <span className="flex justify-center item-center mx-2 rounded-lg shadow-lg py-1.5 px-3 pointer animate-pulse bg-gradient-to-b from-green-400 to-green-800 hover:bg-gradient-to-r text-white dark:text-gray-400 hover:from-green-400 hover:to-green-800 hover:-skew-x-3 transition ease-in" onClick={changeLanguage}>{language}</span>
 
                                 <svg onClick={() => setShow(!show)} aria-label="Main Menu" aria-haspopup="true" xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu" width={32} height={32} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">

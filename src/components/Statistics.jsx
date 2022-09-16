@@ -49,16 +49,16 @@ export default function Statistic() {
                     <img src="https://i.ibb.co/KjrPCyW/map.png" alt="world map bg" className="w-full xl:h-full h-96 object-cover object-fill sm:block hidden" />
                     <img src="https://i.ibb.co/SXKj9Mf/map-bg.png" alt="mobile bg" className="sm:hidden -mt-10 block w-full h-96 object-cover object-fill absolute z-0" />
                     <div className="shadow-lg xl:p-6 p-4 sm:w-auto w-full px-20 rounded-xl bg-white dark:bg-gray-900/100 sm:absolute relative z-20  mt-4 left-0 xl:ml-56 sm:ml-12 xl:-mt-40 sm:-mt-12">
-                        <p className="text-3xl font-black text-gray-700 dark:text-gray-500">{users}</p>
-                        <p className="text-base leading-4 xl:mt-4 mt-2 text-gray-600">{employeeTitle}</p>
+                        <p className={arabic ? "arabic-text text-3xl font-black text-gray-700 dark:text-gray-500" : "text-3xl font-black text-gray-700 dark:text-gray-500"}>{users}</p>
+                        <p className={arabic ? "arabic-text text-base leading-4 xl:mt-4 mt-2 text-gray-600" : "text-base leading-4 xl:mt-4 mt-2 text-gray-600"}>{employeeTitle}</p>
                     </div>
                     <div className="shadow-lg xl:p-6 p-4 sm:w-auto w-full px-20 rounded-xl bg-white dark:bg-gray-900/100 sm:absolute relative z-20 mt-4 xl:mt-80 sm:mt-56 xl:-ml-0 sm:-ml-12">
-                        <p className="text-3xl font-black text-gray-700 dark:text-gray-500">{projects}</p>
-                        <p className="text-base leading-4 xl:mt-4 mt-2 text-gray-600">{projectsTitle}</p>
+                        <p className={arabic ? "arabic-text text-3xl font-black text-gray-700 dark:text-gray-500" : "text-3xl font-black text-gray-700 dark:text-gray-500"}>{projects}</p>
+                        <p className={arabic ? "arabic-text text-base leading-4 xl:mt-4 mt-2 text-gray-600" : "text-base leading-4 xl:mt-4 mt-2 text-gray-600"}>{projectsTitle}</p>
                     </div>
                     <div className="shadow-lg xl:p-6 p-4 sm:w-auto w-full px-20 rounded-xl bg-white dark:bg-gray-900/100 sm:absolute relative z-20 md:mt-0 sm:-mt-5 mt-4 right-0 xl:mr-56 sm:mr-24">
-                        <p className="text-3xl font-black text-gray-700 dark:text-gray-500">{clients}</p>
-                        <p className=" text-base leading-4 xl:mt-4 mt-2 text-gray-600">{clientsTitle}</p>
+                        <p className={arabic ? "arabic-text text-3xl font-black text-gray-700 dark:text-gray-500" : "text-3xl font-black text-gray-700 dark:text-gray-500"}>{clients}</p>
+                        <p className={arabic ? "arabic-text  text-base leading-4 xl:mt-4 mt-2 text-gray-600" : " text-base leading-4 xl:mt-4 mt-2 text-gray-600"}>{clientsTitle}</p>
                     </div>
                 </div>
             </div>

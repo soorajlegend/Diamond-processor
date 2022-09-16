@@ -19,14 +19,14 @@ export default function Footer() {
 
 
       <footer className="absolute  h-[60vh] w-full flex mt-10 justify-center item-center text-gray-100 dark-text-800 dark:text-white body-font">
-      <div className={arabic ? "container  px-5 py-8 mx-auto flex flex-col md:flex-row-reverse justify-between items-end " : "container  px-5 py-8 mx-auto flex flex-col md:flex-row justify-between items-end "}>
+      <div className={arabic ? "arabic-text container  px-5 py-8 mx-auto flex flex-col md:flex-row-reverse justify-between items-end " : "container  px-5 py-8 mx-auto flex flex-col md:flex-row justify-between items-end "}>
       <img src={arabic ? Bg1 : Bg} alt="" className='absolute left-0 bottom-0 object-cover h-full w-full xl:mt-10 z-0' />
         <div className={arabic ? 'relative z-auto flex  flex-row-reverse mt-20 md:mt-5' : 'relative z-auto flex  flex-row mt-20 md:mt-5'}>
-        <a className={arabic ? "flex flex-row-reverse title-font font-medium  md:justify-start justify-center text-gray-900" : "flex flex-row title-font font-medium  md:justify-start justify-center text-gray-900"}>
+        <a className={arabic ? "arabic-text flex flex-row-reverse title-font font-medium  md:justify-start justify-center text-gray-900" : "flex flex-row title-font font-medium  md:justify-start justify-center text-gray-900"}>
          <img src={Logo} alt="" className=' w-20 h-10 md:h-auto md:w-52' />
           <span className="ml-3 text-xl text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 animate-pulse">{idText}</span>
         </a>
-        <p className={arabic ? "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 sm:ml-4 sm:pr-4 sm:border-r-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4" : "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100  sm:ml-4 sm:pl-4 sm:border-l-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4"}> {copyright}
+        <p className={arabic ? "arabic-text text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 sm:ml-4 sm:pr-4 sm:border-r-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4" : "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100  sm:ml-4 sm:pl-4 sm:border-l-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4"}> {copyright}
           <a href="https://twitter.com/knyttneve" className="mt-10 text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 ml-1" rel="noopener noreferrer" target="_blank">@salem.sa</a>
         </p>
         </div>
@@ -82,9 +82,9 @@ export default function Footer() {
 //     <img className="absolute object-cover top-10 h-full w-full xl:mt-10 z-0" src={arabic ? Bg1 : Bg} alt="background" />
 
 //   {/* <svg xmlns="http://www.w3.org/2000/svg" className="absolute object-cover  bottom-0 h-screen w-full xl:mt-10 z-0" viewBox="0 0 1440 320"><path fill="#00cba9" fill-opacity="0.2" d="M0,0L80,48C160,96,320,192,480,234.7C640,277,800,267,960,256C1120,245,1280,235,1360,229.3L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path></svg> */}
-//     <div className={arabic ? "flex pt-36 md:pt-32 lg:pt-40 xl:pt-96 mt-20  px-4 md:px-6  xl:px-20 flex-col justify-en items-start md:justify-end md:items-right relative z-10" : "flex pt-36 md:pt-32 lg:pt-40 xl:pt-96 mt-20  px-4 md:px-6  xl:px-20 flex-col justify-start items-start md:justify-start md:items-left relative z-10"}>
+//     <div className={arabic ? "arabic-text flex pt-36 md:pt-32 lg:pt-40 xl:pt-96 mt-20  px-4 md:px-6  xl:px-20 flex-col justify-en items-start md:justify-end md:items-right relative z-10" : "flex pt-36 md:pt-32 lg:pt-40 xl:pt-96 mt-20  px-4 md:px-6  xl:px-20 flex-col justify-start items-start md:justify-start md:items-left relative z-10"}>
       
-//       <div className={arabic ? "w-screen text-right flex md:flex-row-reverse justify-start item-start xl:justify-center xl:space-x-8 xl:flex-row-reverse" : "w-screen text-right flex md:flex-row- justify-start item-start xl:justify-center xl:space-x-8 xl:flex-row"}>
+//       <div className={arabic ? "arabic-text w-screen text-right flex md:flex-row-reverse justify-start item-start xl:justify-center xl:space-x-8 xl:flex-row-reverse" : "w-screen text-right flex md:flex-row- justify-start item-start xl:justify-center xl:space-x-8 xl:flex-row"}>
 //         {/* <div className="flex justify-start flex-row-reverse items-center space-x-4">
 //           <div className="cursor-pointer w-12">
             
@@ -93,29 +93,29 @@ export default function Footer() {
 //           <p className="w-60 text-xl xl:text-2xl font-semibold leading-normal text-white">Diamond Processor</p>
 //         </div> */}
 //         <div className={arabic ? 'flex flex-row-reverse justify-start' : 'flex flex-row justify-center'}>
-//         <div className={arabic ? "mt-12 xl:mt-0 right-0 flex md:flex-row sm:flex-col gap-y-12 sm:gap-y-0 w-full md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8" : "mt-12 xl:mt-0 right-0 flex md:flex-row sm:flex-col gap-y-12 sm:gap-y-0 w-full md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8"}>
+//         <div className={arabic ? "arabic-text mt-12 xl:mt-0 right-0 flex md:flex-row sm:flex-col gap-y-12 sm:gap-y-0 w-full md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8" : "mt-12 xl:mt-0 right-0 flex md:flex-row sm:flex-col gap-y-12 sm:gap-y-0 w-full md:w-auto sm:gap-x-20 md:gap-x-28 xl:gap-8"}>
            
 //             <div className="flex justify-start md:flex-row-reverse space-x-4">
 //           <div className="cursor-pointer w-12">
             
 //             <img src={Logo} alt="logo" />
 //           </div>
-//           <p className={arabic ? "w-60 text-xl xl:text-2xl font-semibold leading-normal text-right text-white" : "w-60 text-xl xl:text-2xl font-semibold leading-normal text-left text-white"}>Diamond Processor</p>
+//           <p className={arabic ? "arabic-text w-60 text-xl xl:text-2xl font-semibold leading-normal text-right text-white" : "w-60 text-xl xl:text-2xl font-semibold leading-normal text-left text-white"}>Diamond Processor</p>
 //         </div>
           
 //           <div className="sm:w-40 md:w-auto xl:w-72 flex justify-start items-start flex-col space-y-6">
-//             <h2 className={arabic ? "text-base xl:text-xl text-right w-full font-bold xl:font-semibold leading-4 xl:leading-5 text-white" : "text-base xl:text-xl text-left w-full font-bold xl:font-semibold leading-4 xl:leading-5 text-white"}>Important links</h2>
-//              <a href="#Footer" className={arabic ? "text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
+//             <h2 className={arabic ? "arabic-text text-base xl:text-xl text-right w-full font-bold xl:font-semibold leading-4 xl:leading-5 text-white" : "text-base xl:text-xl text-left w-full font-bold xl:font-semibold leading-4 xl:leading-5 text-white"}>Important links</h2>
+//              <a href="#Footer" className={arabic ? "arabic-text text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
 //               Homepage
 //             </a>
-//             <a href="#Footer" className={arabic ? "text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
+//             <a href="#Footer" className={arabic ? "arabic-text text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
 //               About Us
 //             </a>
            
-//             <a href="#Footer" className={arabic ? "text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
+//             <a href="#Footer" className={arabic ? "arabic-text text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
 //               Who we are
 //             </a>
-//             <a href="#Footer" className={arabic ? "text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
+//             <a href="#Footer" className={arabic ? "arabic-text text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
 //               Our services
 //             </a>
 //           </div>
@@ -124,17 +124,17 @@ export default function Footer() {
 
 
 //           <div className="sm:w-40 md:w-auto xl:w-72 flex justify-start items-start flex-col space-y-6">
-//             <h2 className={arabic ? "text-base xl:text-xl font-bold xl:font-semibold leading-4 text-right w-full xl:leading-5 text-white" : "text-base xl:text-xl font-bold xl:font-semibold leading-4 text-right w-full xl:leading-5 text-white"}>Our Contact</h2>
-//             <a href="#Footer" className={arabic ? "text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
+//             <h2 className={arabic ? "arabic-text text-base xl:text-xl font-bold xl:font-semibold leading-4 text-right w-full xl:leading-5 text-white" : "text-base xl:text-xl font-bold xl:font-semibold leading-4 text-right w-full xl:leading-5 text-white"}>Our Contact</h2>
+//             <a href="#Footer" className={arabic ? "arabic-text text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
 //              Mobile: +966540544246
 //             </a>
-//             <a href="#Footer" className={arabic ? "text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
+//             <a href="#Footer" className={arabic ? "arabic-text text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
 //              Email: Salem@idp.sa
 //             </a>
-//             <a href="#Footer" className={arabic ? "text-right w-full text-base font-smooth hover:text-gray-400  text-gray-100" : "text-left w-full text-base font-smooth hover:text-gray-400  text-gray-100"}>
+//             <a href="#Footer" className={arabic ? "arabic-text text-right w-full text-base font-smooth hover:text-gray-400  text-gray-100" : "text-left w-full text-base font-smooth hover:text-gray-400  text-gray-100"}>
 //               Location: <b>Diamond Processor</b>for information technology Saad bin thalabah, Riyard 13338, Kingdom of Saudi Arabia
 //             </a>
-//             <a href="#Footer" className={arabic ? "text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
+//             <a href="#Footer" className={arabic ? "arabic-text text-right w-full text-base hover:text-gray-400  text-gray-100" : "text-left w-full text-base hover:text-gray-400  text-gray-100"}>
 //               Time: From Saturday to Thursday from ten in the morning to  10 in the evening, every day <br />Friday is off
 //             </a>
 //           </div>

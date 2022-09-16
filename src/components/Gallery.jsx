@@ -12,11 +12,11 @@ export const Gallery = ({ galleryImages }) => {
 
     return (
       <div className="relative z-20 px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div className={arabic ? "flex flex-col mb-6 lg:justify-start lg:flex-row md:mb-8" : "flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8"}>
+        <div className={arabic ? "arabic-text flex flex-col mb-6 lg:justify-start lg:flex-row md:mb-8" : "flex flex-col mb-6 lg:justify-between lg:flex-row md:mb-8"}>
           <h2 className="max-w-lg mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:mb-6 group">
             <div className="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100" />
           </h2>
-          <p className={arabic ? "text-gray-700 text-right lg:text-sm lg:max-w-md" : "text-gray-700 lg:text-sm lg:max-w-md"}>
+          <p className={arabic ? "arabic-text text-gray-700 text-right lg:text-sm lg:max-w-md" : "text-gray-700 lg:text-sm lg:max-w-md"}>
             {"\"" + abIdpText}
           </p>
         </div>
@@ -31,8 +31,8 @@ export const Gallery = ({ galleryImages }) => {
                  alt={item.image}
                />
                <div className="absolute inset-0 px-6 py-4 transition-opacity duration-200 bg-black bg-opacity-75 opacity-0 hover:opacity-100">
-                 <p className={arabic ? "mb-4 text-lg font-bold text-right text-gray-100" : "mb-4 text-lg font-bold text-gray-100"}>{item.title}</p>
-                 <p className={arabic ? "text-sm tracking-wide text-gray-300 text-right" : "text-sm tracking-wide text-gray-300"}>{item.description}
+                 <p className={arabic ? "arabic-text mb-4 text-lg font-bold text-right text-gray-100" : "mb-4 text-lg font-bold text-gray-100"}>{item.title}</p>
+                 <p className={arabic ? "arabic-text text-sm tracking-wide text-gray-300 text-right" : "text-sm tracking-wide text-gray-300"}>{item.description}
                  </p>
                </div>
              </div>

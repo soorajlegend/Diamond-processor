@@ -21,8 +21,8 @@ function CTA({ title, image1, image2, image3, image4 }) {
 <div className="max-w-screen-xl p-4 bg-white dark:bg-gray-900/100 dark:shadow-lg rounded-xl mx-auto px-4 sm:px-6 lg:px-8 relative py-26 lg:mt-20">
     <div className="relative">
         <div className="lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center">
-            <div className={arabic ? "lg:col-start-1 lg:max-w-2xl ml-auto" : "lg:col-start-2 lg:max-w-2xl ml-auto"}>
-              <div className={arabic ? "text-right" : "text-left " }>
+            <div className={arabic ? "arabic-text lg:col-start-1 lg:max-w-2xl ml-auto" : "lg:col-start-2 lg:max-w-2xl ml-auto"}>
+              <div className={arabic ? "arabic-text text-right" : "text-left " }>
               <p className="leading-6 text-green-400 font-bold uppercase text-3xl ">
                     {title}
                 </p>
@@ -35,60 +35,60 @@ function CTA({ title, image1, image2, image3, image4 }) {
               </div>
                 <ul className="mt-8 md:grid md:grid-cols-2 gap-6">
                     <li className="mt-6 lg:mt-0">
-                        <div className={arabic ? "flex flex-row-reverse" : "flex"}>
+                        <div className={arabic ? "arabic-text flex flex-row-reverse" : "flex"}>
                             <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                 <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd">
                                     </path>
                                 </svg>
                             </span>
-                            <span className={arabic ? "mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
+                            <span className={arabic ? "arabic-text mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
                              {Live}
                             </span>
                         </div>
                     </li>
                     <li className="mt-6 lg:mt-0">
-                        <div className={arabic ? "flex flex-row-reverse" : "flex"}>
+                        <div className={arabic ? "arabic-text flex flex-row-reverse" : "flex"}>
                             <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                 <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd">
                                     </path>
                                 </svg>
                             </span>
-                            <span className={arabic ? "mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
+                            <span className={arabic ? "arabic-text mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
                                {design}
                             </span>
                         </div>
                     </li>
                     <li className="mt-6 lg:mt-0">
-                        <div className={arabic ? "flex flex-row-reverse" : "flex"}>
+                        <div className={arabic ? "arabic-text flex flex-row-reverse" : "flex"}>
                             <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                 <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd">
                                     </path>
                                 </svg>
                             </span>
-                            <span className={arabic ? "mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
+                            <span className={arabic ? "arabic-text mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
                               {support}
                             </span>
                         </div>
                     </li>
                     <li className="mt-6 lg:mt-0">
-                        <div className={arabic ? "flex flex-row-reverse" : "flex"}>
+                        <div className={arabic ? "arabic-text flex flex-row-reverse" : "flex"}>
                             <span className="flex-shrink-0 flex items-center justify-center h-6 w-6 rounded-full bg-green-100 text-green-800 dark:text-green-500 drark:bg-transparent">
                                 <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
                                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd">
                                     </path>
                                 </svg>
                             </span>
-                            <span className={arabic ? "mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
+                            <span className={arabic ? "arabic-text mr-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200" : "ml-4 text-base leading-6 font-medium text-gray-500 dark:text-gray-200"}>
                                {time}
                             </span>
                         </div>
                     </li>
                 </ul>
             </div>
-            <div className={arabic ? "mt-10 lg:-mx-4 relative relative-20 lg:mt-0 lg:col-start-2" : "mt-10 lg:-mx-4 relative relative-20 lg:mt-0 lg:col-start-1"}>
+            <div className={arabic ? "arabic-text mt-10 lg:-mx-4 relative relative-20 lg:mt-0 lg:col-start-2" : "mt-10 lg:-mx-4 relative relative-20 lg:mt-0 lg:col-start-1"}>
                 <div className="relative space-y-4">
                     <div className="flex items-end justify-center lg:justify-start space-x-4">
                         <img className="rounded-lg shadow-lg w-32 md:w-56" width="200" src={image1} alt="1"/>

@@ -30,9 +30,9 @@ function AboutDp() {
             <div className="relative z-10 bg-gray-50 text-gray-700 mt-10 dark:bg-gray-900/100 dark:text-gray-200 1s ease-in-out">
                 <div className="w-full px-5 mt-20 flex justify-center item-center flex-column">
                     <div className="md:w-1/2 block justify-center item-center">
-                        <h2 className="md:text-5xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center" >{idText}</h2>
+                        <h2 className="md:text-4xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center  arabic-text" >{idText}</h2>
 
-                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow">{abIdpText}</p>
+                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{abIdpText}</p>
                     </div>
 
                 </div>
@@ -40,13 +40,13 @@ function AboutDp() {
                 <div className="w-full md:flex md:flex-row justify-between">
 
                     <div className="md:w-1/2  justify-center item-center px-20 mt-5">
-                        <h2 className="md:text-5xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center" >{MissionTitle}</h2>
-                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow">{MissionText}</p>
+                        <h2 className="md:text-5xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center arabic-text" >{MissionTitle}</h2>
+                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{MissionText}</p>
                     </div>
 
                     <div className="md:w-1/2  justify-center item-center px-20 mt-5">
-                        <h2 className="md:text-5xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center" >{VissionTitle}</h2>
-                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow">{MissionText}</p>
+                        <h2 className="md:text-5xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center arabic-text"  arabic-text>{VissionTitle}</h2>
+                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{MissionText}</p>
                     </div>
                 </div>
 

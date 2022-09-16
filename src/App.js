@@ -18,6 +18,7 @@ import Contact from "./screens/Contact";
 import Login from "./screens/Login";
 import Space from "./components/Space";
 import { AnimatePresence } from "framer-motion";
+import ScrollToTop from "./components/scrollToTop";
 
 
 
@@ -29,7 +30,7 @@ export default function App() {
     <Navigation />
         <Space />
       <AnimatePresence exitBeforeEnter>
-       
+       <ScrollToTop />
         <Routes key={location.pathname} location={location}>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/about" element={<About />} />
