@@ -123,7 +123,7 @@ export default function Navigation() {
                                     </Link>
 
 
-                                    <Link to="/login">
+                                    <Link to="/login"  onClick={() => setShow(false)}>
                                         <li className="text-gray-500 pt-8">
                                             <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
