@@ -146,7 +146,7 @@ export default function Navigation() {
                 <nav className={arabic ? "fixed h-auto flex-row-reverse w-full mx-auto z-1 px-10 top-0 bg-white dark:bg-gray-900/100 shadow-lg" : "fixed h-auto w-full mx-auto z-1 px-10 top-0 bg-white dark:bg-gray-900/100 shadow-lg"}>
                     <div className={arabic ? "container justify-between bg-white dark:bg-gray-900/100 h-16 flex  flex-row-reverse items-center lg:items-stretch mx-auto" : "container justify-between bg-white dark:bg-gray-900/100 h-16 flex items-center lg:items-stretch mx-auto"}>
                         <div className={arabic ? "bg-white dark:bg-gray-900/100 flex  flex-row-reverse items-center" : "bg-white dark:bg-gray-900/100 flex items-center"}>
-                            <div className={arabic ? "flex flex-row-reverse -mr-[30px] items-center " : "-ml-[30px] flex items-center "}>
+                            <div className={arabic ? "flex flex-row-reverse -mr-[30px] md:-mr-0 md:ml-10 items-center " : "-ml-[30px] md:-ml-0 md:mr-10  flex items-center "}>
                                 <img src={Logo} alt="logo" className="h-10" />
                             </div>
                             <ul className={arabic ? "pr-12 xl:flex  flex-row-reverse items-center  hidden" : "pr-12 xl:flex items-center  hidden"}>
