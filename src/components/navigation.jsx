@@ -36,7 +36,7 @@ export default function Navigation() {
 
     return (
         <>
-            <div className="fixed z-50 top-0 bg-gray-200 dark:bg-gray-900/100 w-full ">
+            <div className="fixed z-[1000] top-0 bg-gray-200 dark:bg-gray-900/100 w-full ">
                 <div className={show ? "w-full h-full absolute z-40  transform  translate-x-0 " : "   w-full h-full absolute z-40  transform -translate-x-full"}>
                     <div className="bg-gray-800 opacity-50 inset-0 fixed w-full h-full" onClick={() => setShow(!show)} />
                     <div className="w-64 md-z-20 absolute left-0 z-40 top-0  shadow flex-col justify-between transition duration-150 ease-in-out h-full">
