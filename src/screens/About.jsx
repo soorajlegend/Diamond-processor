@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import image1 from '../images/banner.png';
 import image2 from '../images/rami-al-zayat-w33-zg-dNL4-unsplash.jpg';
 import image3 from '../images/home-pic.6903466.png';
@@ -9,6 +9,7 @@ import Gallery from '../components/Gallery';
 import Concept from '../components/Ourconcept';
 import { useSelector } from 'react-redux';
 import { selectArabic } from '../slices/infoSlice';
+import AnimatedPage from '../animation.js';
 
 
 
@@ -22,23 +23,26 @@ function About() {
 
   const abIdpText = arabic ? "لقد تطور العالم الرقمي بشكل سريع وطغى على جميع جوانب الحياة ، وأصبحت التكنولوجيا شريانًا أساسيًا في عصرنا ، ونحن في مؤسسة معالج الألماس لتكنولوجيا المعلومات ، نسعى إلى تحقيق طموحاتك الرقمية باحترافية عالية وبيد سعودية قادرة ، لنخلق لك من طموحات التكنولوجيا التي تحتضن السماء" : "The digital world has developed rapidly and has overwhelmed all aspects of life and technology has become a fundamental artery in our time, and we at the Diamond Processor Foundation for Information Technology, seek to achieve your digital ambitions with high professionalism and with a capable Saudi hand, to create for you from technology ambitions that embrace the sky";
 
-    
-const galleryImages = ([
-    {id: 1, image: image1, title: idText, description: abIdpText},
-    {id: 2, image: image3, title: idText, description: abIdpText},
-    {id: 3, image: image4, title: idText, description: abIdpText},
-    {id: 4, image: image5, title: idText, description: abIdpText},
-    {id: 5, image: image2, title: idText, description: abIdpText},
-    {id: 6, image: image4, title: idText, description:abIdpText}
-]); 
+
+  const galleryImages = ([
+    { id: 1, image: image1, title: idText, description: abIdpText },
+    { id: 2, image: image3, title: idText, description: abIdpText },
+    { id: 3, image: image4, title: idText, description: abIdpText },
+    { id: 4, image: image5, title: idText, description: abIdpText },
+    { id: 5, image: image2, title: idText, description: abIdpText },
+    { id: 6, image: image4, title: idText, description: abIdpText }
+  ]);
 
 
   return (
-    <div className='max-w-[100vh] md:max-w-full sm:overflow-x-hidden scroll-bar-hide'>
-        <CTA title={title} image1={image1} image2={image2} image3={image3} image4={image4}/>
+    <AnimatedPage>
+      <div className='max-w-[100vh] md:max-w-full sm:overflow-x-hidden scroll-bar-hide'>
+        <CTA title={title} image1={image1} image2={image2} image3={image3} image4={image4} />
         <Concept image={image3} />
-        <Gallery galleryImages={galleryImages}/>
-    </div>
+        <Gallery galleryImages={galleryImages} />
+      </div>
+    </AnimatedPage>
+
   )
 }
 

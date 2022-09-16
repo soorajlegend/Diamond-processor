@@ -24,9 +24,6 @@ function AllServices({ image }) {
 
     const BrandingText = arabic  ? "مهما كان حجم شركتك ، نقوم بإنشاء علامات تجارية تنقل عروضك بشكل مثالي وتعزز مكانتك في السوق من خلال الدمج المثالي للعناصر المرئية والنسخ" : "Whatever the size of your company, we create brands that perfectly communicate your offering and solidify your position in the market through a pitch perfect amalgamation of visuals and copy.";
 
-    // const  =  ? "" : "";
-    // const  =  ? "" : "";
-    // const  =  ? "" : "";
 
     return (
     <>

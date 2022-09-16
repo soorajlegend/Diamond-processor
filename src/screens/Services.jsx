@@ -9,6 +9,7 @@ import AllServices from '../components/AllServices';
 import Device from '../images/checkout.a8d4821.png';
 import { useSelector } from 'react-redux';
 import { selectArabic } from '../slices/infoSlice';
+import AnimatedPage from '../animation.js';
 
 
 function Services() {
@@ -20,7 +21,8 @@ const arabic = useSelector(selectArabic);
 const title = arabic ? "خدمات" : "Services";
 
     return (
-        <div className='max-w-[100vh]  md:max-w-full sm:overflow-x-hidden scroll-bar-hide'>
+        <AnimatedPage>
+             <div className='max-w-[100vh]  md:max-w-full sm:overflow-x-hidden scroll-bar-hide'>
             <CTA title={title} image1={image1} image2={image2} image3={image3} image4={image4} />
             <AllServices image={image5} />
             <div className="w-full md:flex justify-center item-center md:-mt-10 sm:mt-20 sm:hidden">
@@ -30,6 +32,8 @@ const title = arabic ? "خدمات" : "Services";
                 </div>
             </div>
         </div>
+        </AnimatedPage>
+       
     )
 }
 
