@@ -55,7 +55,7 @@ export default function Navigation() {
                                     </div>
                                 </div>
                                 <ul className="f-m-m px-5">
-                                    <Link to="/">
+                                    <Link to="/" onClick={() => setShow(false)}>
                                         <li className="text-gray-500 pt-8 ">
                                             <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
@@ -66,7 +66,7 @@ export default function Navigation() {
                                         </li>
                                     </Link>
 
-                                    <Link to="/about">
+                                    <Link to="/about"  onClick={() => setShow(false)}>
                                         <li className="text-gray-500 pt-8">
                                             <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
@@ -80,7 +80,7 @@ export default function Navigation() {
                                         </li>
                                     </Link>
 
-                                    <Link to="/services">
+                                    <Link to="/services"  onClick={() => setShow(false)}>
                                         <li className="text-gray-500 pt-8">
                                             <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
@@ -94,7 +94,7 @@ export default function Navigation() {
                                         </li>
                                     </Link>
 
-                                    <Link to="/clients">
+                                    <Link to="/clients"  onClick={() => setShow(false)}>
                                         <li className="text-gray-500 pt-8">
                                             <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
@@ -108,7 +108,7 @@ export default function Navigation() {
                                         </li>
                                     </Link>
 
-                                    <Link to="/contact">
+                                    <Link to="/contact"  onClick={() => setShow(false)}>
                                         <li className="text-gray-500 pt-8">
                                             <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
                                                 <div className="md:w-6 md:h-6 w-5 h-5">
