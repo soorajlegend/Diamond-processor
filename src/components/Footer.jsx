@@ -9,7 +9,9 @@ export default function Footer() {
 
   const arabic = useSelector(selectArabic); 
 
-    const idText = arabic ? "معالج ماسي لتكنولوجيا المعلومات — 2020 ©" : "© 2020IT — Diamond processor";
+    const idText = arabic ? "معالج ماسي لتكنولوجيا المعلومات" : "Diamond processor";
+
+    const copyright = arabic ? "معالج ماسي لتكنولوجيا المعلومات — 2020 ©" : "© 2020IT — Diamond processor";
 
    
     return (
@@ -24,8 +26,8 @@ export default function Footer() {
          <img src={Logo} alt="" className=' w-20 h-10 md:h-auto md:w-52' />
           <span class="ml-3 text-xl text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 animate-pulse">{idText}</span>
         </a>
-        <p class={arabic ? "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 sm:ml-4 sm:pr-4 sm:border-r-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4" : "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100  sm:ml-4 sm:pl-4 sm:border-l-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4"}> {idText}
-          <a href="https://twitter.com/knyttneve" class="text-gray-100 mt-10 text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 ml-1" rel="noopener noreferrer" target="_blank">@salem.sa</a>
+        <p class={arabic ? "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 sm:ml-4 sm:pr-4 sm:border-r-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4" : "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100  sm:ml-4 sm:pl-4 sm:border-l-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 mt-4"}> {copyright}
+          <a href="https://twitter.com/knyttneve" class="mt-10 text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 ml-1" rel="noopener noreferrer" target="_blank">@salem.sa</a>
         </p>
         </div>
        <div className={arabic ? 'relative z-auto flex  flex-row-reverse' : 'relative z-auto flex  flex-row'}>
