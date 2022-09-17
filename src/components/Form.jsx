@@ -1,10 +1,18 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { selectArabic } from '../slices/infoSlice';
+import { selectControlAccess, setControlAccess } from "../slices/infoSlice";
+
 
 function Form() {
 
     const arabic = useSelector(selectArabic); 
+    const dispatch = useDispatch();
+
+    const access = useSelector(selectControlAccess);
+    const changeAccess = () => dispatch(setControlAccess(access ? false : true));
+
 
     const title = arabic ? "تسجيل الدخول" : "Sign in.";
     const email = arabic ? "عنوان البريد الالكترونى" : "Email address";
@@ -59,7 +67,7 @@ function Form() {
                             </div>
 
                             <div>
-                                <button type="submit" className="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-gradient-to-b from-green-400 to-green-800 rounded-xl hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">{title}</button>
+                                <Link to="/controlpanel" className="flex items-center justify-center w-full px-10 py-4 text-base font-medium text-center text-white transition duration-500 ease-in-out transform bg-gradient-to-b from-green-400 to-green-800 rounded-xl hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 " onClick={()=> changeAccess() }>{title}</Link>
                             </div>
                         </form>
                         <div className="relative my-4">

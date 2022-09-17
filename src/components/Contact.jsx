@@ -8,7 +8,7 @@ function ContactForm() {
 
     const title = arabic ? "اتصل بنا للمزيد" : "Contact Us For More Info";
 
-    const address = arabic ? "المعالج الماسي لتقنية المعلومات سعد بن ثلبه ، الرياض 13338 ، المملكة العربية السعودية" : "Diamond Processor for Information Technology Saad bin Thalabah, Riyadh 13338, Kingdom of Saudi Arabia"
+    const address = arabic ? ". سعد بن ثلبه ، الرياض 13338 ، المملكة العربية السعودية" : " Saad bin Thalabah, Riyadh 13338, Kingdom of Saudi Arabia"
     
     const follow = arabic ? "تابعنا" : "follow us";
 
@@ -105,12 +105,12 @@ function ContactForm() {
                     <form className={arabic ? "arabic-text mt-6 text-right" : "mt-6"}>
                         <div className="flex-1">
                             <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">{name}</label>
-                            <input type="text" placeholder={name} className={arabic ? "arabic-text block w-full text-right px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" : "block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"} />
+                            <input type="text" placeholder={placeholder} className={arabic ? "arabic-text block w-full text-right px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" : "block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"} />
                         </div>
 
                         <div className="flex-1 mt-6">
                             <label className="block mb-2 text-sm text-gray-600 dark:text-gray-200">{email}</label>
-                            <input type="email" placeholder="johndoe@example.com" className={arabic ? "arabic-text block w-full text-right px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" : "block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"} />
+                            <input type="email" placeholder="sooraj@example.com" className={arabic ? "arabic-text block w-full text-right px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40" : "block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-md dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-green-400 dark:focus:border-green-400 focus:ring-green-400 focus:outline-none focus:ring focus:ring-opacity-40"} />
                         </div>
 
                         <div className="w-full mt-6">

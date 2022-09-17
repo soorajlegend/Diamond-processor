@@ -19,7 +19,7 @@ function Hero() {
         <>
             {/* Header Section */}
             <div className='flex w-full h-screen justify-center items-center px-10 dark:bg-gray-900/100 ease-in-out'>
-                <div className="w-screen h-screen absolute z-20  md:mt-20 bg-gradient-to-t from-gray-50 to-gray-50/0  dark:from-gray-900 dark:to-gray-900/0"></div>
+                <div className="w-screen h-screen absolute z-20  md:mt-40 bg-gradient-to-t from-gray-50 to-gray-50/0  dark:from-gray-900 dark:to-gray-900/0"></div>
                 <img src={HeaderImage} alt="header " className={arabic ? 'absolute z-50 sm:block sm:w-full md:left-20 sm:-mt-20 md:w-[40%] md:mt-20  object-cover' : 'absolute z-50 sm:block sm:w-full md:right-20 sm:-mt-20 md:w-[40%] md:mt-20  object-cover'} />
                 <div className={arabic ? "md:absolute absolute  -mt-[500px]  z-50 right-7 text-right sm:block  py-10 px-10 md:mt-10" : "md:absolute absolute  -mt-[500px] z-10 left-7 sm:block  py-10 px-10 md:mt-10"}>
                     <h1 className={arabic ? "text-4xl font-black md:text-7xl  md:max-w-[70%] md:ml-[30%]  border-l-emerald-300 text-gray-900 animate-pulse  dark:text-gray-200 arabic-text" : "text-4xl font-black md:text-7xl animate-pulse md:max-w-[50%] border-l-emerald-300 text-gray-900 md:text-gray-50 dark:text-gray-200 "}>{idText}</h1>

@@ -19,16 +19,27 @@ import Login from "./screens/Login";
 import Space from "./components/Space";
 import { AnimatePresence } from "framer-motion";
 import ScrollToTop from "./components/scrollToTop";
-
+import Dashboard from "./screens/controlPanel/Dashboard";
+import { useSelector } from 'react-redux';
+import { selectControlAccess } from './slices/infoSlice';
+import Info from "./screens/controlPanel/Info";
+import AboutCompany from "./screens/controlPanel/AboutCompany";
+import ServicesControl from "./screens/controlPanel/ServicesControl";
+import WhyUs from "./screens/controlPanel/WhyUs";
+import ClientControl from "./screens/controlPanel/ClientsControl";
 
 
 export default function App() {
+
+const admin = useSelector(selectControlAccess);
+
+
   const location = useLocation();
 
   return (
     <Suspense fallback={null}> 
-    <Navigation />
-        <Space />
+    { !admin && <Navigation />}
+        {!admin && <Space />}
       <AnimatePresence exitBeforeEnter>
        <ScrollToTop />
         <Routes key={location.pathname} location={location}>
@@ -38,11 +49,20 @@ export default function App() {
           <Route exact path="/clients" element={<Clients />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/controlpanel" element={<Dashboard />} />
+          <Route exact path="/controlpanel/info" element={<Info />} />
+          <Route exact path="/controlpanel/about" element={<AboutCompany />} />
+          <Route exact path="/controlpanel/services" element={<ServicesControl />} />
+          <Route exact path="/controlpanel/why-us" element={<WhyUs />} />
+          <Route exact path="/controlpanel/clients" element={<ClientControl />} />
+          <Route exact path="/controlpanel/gallery" element={<Info />} />
+          <Route exact path="/controlpanel/messages" element={<Info />} />
+          <Route exact path="/controlpanel/setting" element={<Info />} />
           <Route exact path="*" element={<Error10 />} />
         </Routes>
       </AnimatePresence>
 
-      <Footer />
+     { !admin && <Footer />}
     </Suspense>
   );
 }

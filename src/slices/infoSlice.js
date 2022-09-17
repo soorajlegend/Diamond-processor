@@ -6,6 +6,7 @@ const infoSlice = createSlice({
       users: 1678,
       project: 198,
       client: 75,
+      controlAccess: false,
    },
    reducers: {
       setArabic: (state, action) => {
@@ -20,16 +21,20 @@ const infoSlice = createSlice({
       setClient: (state, action) => {
          state.client = action.payload;
       },
+      setControlAccess: (state, action) => {
+         state.controlAccess = action.payload;
+      },
    }
 });
 
-export const { setArabic, setUsers, setClient, setProject} = infoSlice.actions;
+export const { setArabic, setUsers, setClient, setProject,setControlAccess} = infoSlice.actions;
 
 // selector 
 export const selectArabic = (state) => state.info.arabic;
 export const selectUsers = (state) => state.info.users;
 export const selectProject = (state) => state.info.project;
 export const selectClient = (state) => state.info.client;
+export const selectControlAccess = (state) => state.info.controlAccess;
 
 
 export default infoSlice.reducer;
