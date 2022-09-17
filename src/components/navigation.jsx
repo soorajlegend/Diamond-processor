@@ -203,14 +203,14 @@ export default function Navigation() {
                                         </svg>
                                     </Link>
                                     </li>
-                                    <li className="flex justify-center item-center mx-2 rounded-lg w-full scale-75 md:scale-100 shadow-lg py-1 md:py-2 px-2 md:px-3 pointer bg-gradient-to-b from-green-400 to-green-800 hover:bg-gradient-to-r text-gray-800 dark:text-gray-100 hover:from-green-400 hover:to-green-800 hover:-skew-x-3 3s ease-in" onClick={changeLanguage}>{language}</li>
+                                    <li className="flex justify-center item-center mx-2 rounded-lg w-full scale-75 md:scale-100 shadow-lg py-1 md:py-2 px-2 md:px-3 pointer bg-gradient-to-b from-green-400 to-green-800 hover:bg-gradient-to-r text-gray-900 dark:text-white hover:from-green-400 hover:to-green-800 hover:-skew-x-3 3s ease-in" onClick={changeLanguage}>{language}</li>
                                 </div>
                             </ul>
                         </div>
 
                         <div className="visible xl:hidden flex items-center relative bg-white dark:bg-gray-900/100">
                             <div className={arabic ? "arabic-text flex -ml-8 md:ml-0 flex-row-reverse" : "flex -mr-8 md:mr-0"}>
-                                <span className="flex justify-center item-center mx-2 rounded-lg shadow-lg py-1.5 px-3 pointer bg-gradient-to-b from-green-400 to-green-800 hover:bg-gradient-to-r text-white dark:text-gray-400 hover:from-green-400 hover:to-green-800 hover:-skew-x-3 transition ease-in" onClick={changeLanguage}>{language}</span>
+                                <span className="flex justify-center item-center mx-2 rounded-lg shadow-lg py-1.5 px-3 pointer bg-gradient-to-b from-green-400 to-green-800 hover:bg-gradient-to-r text-white dark:text-white hover:from-green-400 hover:to-green-800 hover:-skew-x-3 transition ease-in" onClick={changeLanguage}>{language}</span>
 
                                 <svg onClick={() => setShow(!show)} aria-label="Main Menu" aria-haspopup="true" xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-menu" width={32} height={32} viewBox="0 0 24 24" strokeWidth="1.5" stroke="#2c3e50" fill="none" strokeLinecap="round" strokeLinejoin="round">
                                     <path stroke="none" d="M0 0h24v24H0z" />

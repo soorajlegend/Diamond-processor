@@ -18,10 +18,10 @@ export default function Footer() {
   
 
 
-      <footer className="absolute  h-[60vh] w-full flex mt-10 traslate-y-20 justify-center item-center text-gray-100 dark-text-800 dark:text-white body-font">
+      <footer className="absolute  h-[60vh] w-full flex mt-10 justify-center item-center text-gray-100 dark-text-800 dark:text-white body-font">
       <div className={arabic ? "arabic-text container  px-5 py-8 mx-auto flex flex-col md:flex-row-reverse justify-between items-end " : "container  px-5 py-8 mx-auto flex flex-col md:flex-row justify-between items-end "}>
       <img src={arabic ? Bg1 : Bg} alt="" className='absolute left-0 bottom-0 object-cover h-full w-full xl:mt-10 z-0' />
-        <div className={arabic ? 'relative z-auto flex translate-y-32  justify-between flex-row-reverse mt-20 md:mt-5' : 'relative z-auto flex justify-between translate-y-32 flex-row mt-20 md:mt-5'}>
+        <div className={arabic ? 'relative z-auto flex translate-y-32 md:translate-y-0  justify-between flex-row-reverse mt-20 md:mt-5' : 'relative z-auto flex justify-between translate-y-32 md:translate-y-0 flex-row mt-20 md:mt-5'}>
         <a className={arabic ? "arabic-text flex flex-row-reverse title-font font-medium  md:justify-start justify-center text-gray-900" : "flex flex-row title-font font-medium  md:justify-start justify-center text-gray-900"}>
          <img src={Logo} alt="" className=' w-20 h-10 md:h-auto md:w-52' />
         </a>
