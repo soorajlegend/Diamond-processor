@@ -5,16 +5,17 @@ import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
 import Logo from '../../images/logo-mix.png';
 import List from '../../components/subComponent/List';
+import ImageList from '../../components/subComponent/ImageList';
 
-function ClientControl() {
+function GalleryControl() {
 
 
     const data = [
-        { title: "hello", desc: "By using render prop you can pass a function as a component and also share props from parent itself" },
-        { title: "hello", desc: "By using render prop you can pass a function as a component and also share props from parent itself" },
-        { title: "hello", desc: "By using render prop you can pass a function as a component and also share props from parent itself" },
-        { title: "hello", desc: "By using render prop you can pass a function as a component and also share props from parent itself" },
-        { title: "hello", desc: "By using render prop you can pass a function as a component and also share props from parent itself" },
+        { id: 1, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
+        { id: 2, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
+        { id: 3, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
+        { id: 4, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
+        { id: 5, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
     ]
     return (
         <div className='flex flex-row'>
@@ -30,7 +31,7 @@ function ClientControl() {
 
                             <div className="px-4 py-2 w-full">
                                 <div className="flex justify-center md:justify-start w-full">
-                                    <span className="font-semibold text-2xl  text-emerald-500 dark:text-emerald-400">Why us</span>
+                                    <span className="font-semibold text-2xl  text-emerald-500 dark:text-emerald-400">Gallery</span>
                                 </div>
                             </div>
                         </div>
@@ -45,18 +46,22 @@ function ClientControl() {
                                     <div className="mt-8">
                                         <div className="mt-6">
                                             <form action="#" method="POST" className="space-y-6">
-                                                <p className='text-gray-500'>Add new future</p>
+                                                <p className='text-gray-500'>Add new image</p>
                                                 <div>
                                                     <label HtmlFor="email" className="block text-sm font-medium text-gray-600">Client's Name</label>
                                                     <div className="mt-1">
                                                         <input name="text" type="text" autocomplete="title" required="" placeholder="Client name" className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                                    </div>
+                                                    <div>
+                                                        <label for="email" className="block my-1 text-sm font-medium text-gray-600"> Description </label>
+                                                        <textarea className="block w-full px-5 py-3 mt-2 text-base text-gray-600 placeholder-gray-500 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-200/50 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500 apearance-none autoexpand" id="description " type="text" name="description" placeholder="Description here..." required=""></textarea>
                                                     </div>
                                                 </div>
                                                 <div>
 
                                                     <div class="flex justify-center">
                                                         <div class="mb-3 w-96">
-                                                            <label HtmlFor="formFile" class="block my-2 text-sm font-medium text-gray-600">Image upload</label>
+                                                            <label HtmlFor="formFile" class="block text-sm font-medium text-gray-600">Image upload</label>
                                                             <input class="form-control
                                                              block
                                                              w-full
@@ -71,7 +76,7 @@ function ClientControl() {
                                                              transition
                                                              ease-in-out
                                                              m-0
-                                                             focus:text-gray-700 focus:border-gray-600 focus:outline-none" type="file" id="formFile" />
+                                                             focus:text-gray-700 my-1 focus:border-gray-600 focus:outline-none" type="file" id="formFile" />
                                                         </div>
                                                     </div>
                                                 </div>
@@ -87,7 +92,7 @@ function ClientControl() {
                             </div>
                         </section>
 
-                        <List title="Our services" data={data} />
+                        <ImageList images={data} />
                     </div>
 
 
@@ -98,4 +103,4 @@ function ClientControl() {
     )
 }
 
-export default ClientControl
+export default GalleryControl

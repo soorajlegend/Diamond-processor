@@ -39,7 +39,7 @@ function Concept({ image }) {
             <span className={arabic ? "arabic-text inline-block w-1 h-1 mr-1 bg-green-500 rounded-full" : "inline-block w-1 h-1 ml-1 bg-green-500 rounded-full"}></span>
         </div>
 
-          </div>z
+          </div>
           <div className={arabic ? "arabic-text mt-8 xl:mt-12 lg:flex flex flex-row lg:items-center" : "mt-8 xl:mt-12 lg:flex flex flex-row-reverse lg:items-center"}>
 
             <div className="grid w-full grid-cols-1 gap-8 lg:w-1/2 xl:gap-16 md:grid-cols-2">

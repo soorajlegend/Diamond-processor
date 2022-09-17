@@ -17,16 +17,44 @@ code {
     monospace;
 }
 body::-webkit-scrollbar {
-  width: 2px;               /* width of the entire scrollbar */
+  width: 1px;               /* width of the entire scrollbar */
 }
 
 body::-webkit-scrollbar-track {
-  background: #fff;
+  background: rgba(73, 71, 71, 0.121);
   opacity: 0.1;        /* color of the tracking area */
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #f2f2f2;    /* color of the scroll thumb */
+  background-color: #4d4c4c1c;    /* color of the scroll thumb */
+  border-radius: 20px;        /* creates padding around scroll thumb */
+  opacity: 0.2;
+}
+div::-webkit-scrollbar {
+  width: 1px;               /* width of the entire scrollbar */
+}
+
+div::-webkit-scrollbar-track {
+  background: rgba(158, 156, 156, 0.085);
+  opacity: 0.1;        /* color of the tracking area */
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: #f2f2f209;    /* color of the scroll thumb */
+  border-radius: 20px;        /* creates padding around scroll thumb */
+  opacity: 0.2;
+}
+textarea::-webkit-scrollbar {
+  width: 1px;               /* width of the entire scrollbar */
+}
+
+textarea::-webkit-scrollbar-track {
+  background: rgba(132, 130, 130, 0.053);
+  opacity: 0.1;        /* color of the tracking area */
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #8180802f;    /* color of the scroll thumb */
   border-radius: 20px;        /* creates padding around scroll thumb */
   opacity: 0.2;
 }

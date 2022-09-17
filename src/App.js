@@ -27,6 +27,9 @@ import AboutCompany from "./screens/controlPanel/AboutCompany";
 import ServicesControl from "./screens/controlPanel/ServicesControl";
 import WhyUs from "./screens/controlPanel/WhyUs";
 import ClientControl from "./screens/controlPanel/ClientsControl";
+import GalleryControl from "./screens/controlPanel/galleryControl";
+import Messages from "./screens/controlPanel/Messages";
+import Setting from "./screens/controlPanel/Setting";
 
 
 export default function App() {
@@ -55,9 +58,9 @@ const admin = useSelector(selectControlAccess);
           <Route exact path="/controlpanel/services" element={<ServicesControl />} />
           <Route exact path="/controlpanel/why-us" element={<WhyUs />} />
           <Route exact path="/controlpanel/clients" element={<ClientControl />} />
-          <Route exact path="/controlpanel/gallery" element={<Info />} />
-          <Route exact path="/controlpanel/messages" element={<Info />} />
-          <Route exact path="/controlpanel/setting" element={<Info />} />
+          <Route exact path="/controlpanel/gallery" element={<GalleryControl/>} />
+          <Route exact path="/controlpanel/messages" element={<Messages />} />
+          <Route exact path="/controlpanel/setting" element={<Setting />} />
           <Route exact path="*" element={<Error10 />} />
         </Routes>
       </AnimatePresence>

@@ -39,48 +39,48 @@ function Info() {
                             </a>
                             <div>
                                 <label className="block mb-2 text-sm text-gray-700 ">Company name</label>
-                                <input name="text" type="text" autocomplete="title" required="" placeholder="Eg Google" className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                <input name="text" type="text" autocomplete="title" required="" placeholder="Eg Google" className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                             </div>
 
                             <div>
                                 <label className="block mb-2 text-sm text-gray-700 ">Company email address</label>
-                                <input name="text" type="text" autocomplete="title" required="" placeholder="abcd@123.com" className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                <input name="text" type="text" autocomplete="title" required="" placeholder="abcd@123.com" className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                             </div>
 
                             <div>
                                 <label className="block mb-2 text-sm text-gray-700 ">Mobile number</label>
-                                <input name="text" type="text" autocomplete="title" required="" placeholder=" XXX-XX-XXXX-XX " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                <input name="text" type="text" autocomplete="title" required="" placeholder=" XXX-XX-XXXX-XX " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                             </div>
 
                             <div className='row-span-3'>
 
                                 <label className="text-gray-700" htmlFor="name">Address</label>
-                                <textarea className="block w-full px-5 py-3 mt-2 text-base text-gray-600 placeholder-gray-500 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-50 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500 apearance-none autoexpand" id="description " type="text" name="description" rows="6" placeholder="Description here..." required=""></textarea>
+                                <textarea className="block w-full px-5 py-3 mt-2 text-base text-gray-600 placeholder-gray-500 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-200/90 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500 apearance-none autoexpand" id="description " type="text" name="description" rows="6" placeholder="Description here..." required=""></textarea>
                             </div>
 
                             <div>
                                 <label className="flex flex-row  mb-2 text-sm text-gray-700 "><IoLogoFacebook className='mr-2 text-xl' /> facebook</label>
-                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                             </div>
                             <div>
                                 <label className="flex flex-row  mb-2 text-sm text-gray-700 "><IoLogoInstagram className='mr-2 text-xl' />Instagram</label>
-                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                             </div>
                             <div>
                                 <label className="flex flex-row  mb-2 text-sm text-gray-700 "><IoLogoWhatsapp className='mr-2 text-xl' />Whatsapp</label>
-                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                             </div>
                             <div>
                                 <label className="flex flex-row  mb-2 text-sm text-gray-700 "><IoLogoLinkedin className='mr-2 text-xl' />Linked in</label>
-                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                             </div>
                             <div>
                                 <label className="flex flex-row  mb-2 text-sm text-gray-700 "><IoLogoTiktok className='mr-2 text-xl' />Tiktok</label>
-                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                             </div>
                             <div>
                                 <label className="flex flex-row  mb-2 text-sm text-gray-700 "><IoLogoSnapchat className='mr-2 text-xl' />Snapchat</label>
-                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                <input name="text" type="text" autocomplete="title" required="" placeholder=" https:abcd.com  " className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                             </div>
 
 
