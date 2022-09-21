@@ -444,7 +444,7 @@ function Customers() {
                       />
                     </g>
                     <defs>
-                      <clipPath id="clip0_2049_3163">
+                      <clipPath id="clip1_2049_3163">
                         <rect width={100} height={26} fill="white" />
                       </clipPath>
                     </defs>

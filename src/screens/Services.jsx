@@ -10,6 +10,10 @@ import Device from '../images/checkout.a8d4821.png';
 import { useSelector } from 'react-redux';
 import { selectArabic } from '../slices/infoSlice';
 import AnimatedPage from '../animation.js';
+import Navigation from '../components/navigation';
+import Space from '../components/Space';
+import Footer from '../components/Footer';
+
 
 
 function Services() {
@@ -22,6 +26,8 @@ const title = arabic ? "خدمات" : "Services";
 
     return (
         <AnimatedPage>
+            <Navigation />
+            <Space />
              <div className='max-w-[100vh]  md:max-w-full sm:overflow-x-hidden scroll-bar-hide'>
             <CTA title={title} image1={image1} image2={image2} image3={image3} image4={image4} />
             <AllServices image={image5} />
@@ -32,6 +38,7 @@ const title = arabic ? "خدمات" : "Services";
                 </div>
             </div>
         </div>
+        <Footer />
         </AnimatedPage>
        
     )

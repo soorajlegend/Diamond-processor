@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 import { IoListCircleOutline, IoImagesOutline, IoPower, IoCogSharp, IoAlertOutline, IoChatbubblesOutline, IoPeopleOutline, IoBulbOutline, IoConstructOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
-import Logo from '../images/logo-mix.png'
+import { Link, useNavigate } from "react-router-dom";
+import Logo from '../images/logo-mix.png';
+import { UserAuth } from '../Context/AuthContext';
 
 function SideBar() {
+
     const [show, setShow] = useState(false);
 
+    
+    const { user, logout } = UserAuth();
+    const navigate = useNavigate(); 
 
-    const Menu = [
-        { id: 1, title: "Employee", number: 523 },
-        { id: 1, title: "Project", number: 12123 },
-        { id: 1, title: "Clients", number: 58 },
-        { id: 1, title: "Subscription", number: 57803 },
-    ]
+    const logOut = async () => {
+        try{
+            await logout();
+            navigate("/");
+            console.log('u\'re logged out')
+            console.log(user)
+        } catch(e){
+            console.log(e.message)
+        }
+    }
+
 
     return (
         <div className="flex flex-row">
@@ -130,7 +140,7 @@ function SideBar() {
                     </div>
                 </div>
                 <div className="px-8 border-t border-gray-700">
-                    <div className="flex justify-center  text-gray-700 dark:text-gray-700 item-center py-2">
+                    <div className="flex justify-center  text-gray-700 dark:text-gray-700 item-center py-2" onClick={() => logOut()}>
                         <IoPower className="text-2xl mr-3 shadow-xl" /> <p>Sign out</p>
                     </div>
                 </div>
@@ -263,7 +273,7 @@ function SideBar() {
                     </div>
                 </div>
                 <div className="px-8 border-t border-gray-700">
-                    <div className="flex justify-center  text-gray-700 dark:text-gray-700 item-center py-2">
+                    <div className="flex justify-center  text-gray-700 dark:text-gray-700 item-center py-2" onClick={() => logOut()}>
                         <IoPower className="text-2xl mr-3 shadow-xl" /> <p>Sign out</p>
                     </div>
                 </div>

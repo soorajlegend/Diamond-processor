@@ -19,7 +19,7 @@ function AboutDp() {
 
     const VissionTitle = arabic ? "رؤية" : "Vission";
 
-    const MissionText = arabic ? "نسعى جاهدين لأن نكون مصدر إلهام في العالم الرقمي لتحقيق أهدافك ونطمح لأن نكون متميزين في العالم العربي." : "";
+    const MissionText = arabic ? "نسعى جاهدين لأن نكون مصدر إلهام في العالم الرقمي لتحقيق أهدافك ونطمح لأن نكون متميزين في العالم العربي." : "We strive to be inspiring in the digital world by achieving your goals and looking forward to be unique in the Arab world";
 
 
 
@@ -45,7 +45,7 @@ function AboutDp() {
                     </div>
 
                     <div className="md:w-1/2  justify-center item-center px-20 mt-5">
-                        <h2 className="md:text-5xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center arabic-text"  arabic-text>{VissionTitle}</h2>
+                        <h2 className="md:text-5xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center arabic-text">{VissionTitle}</h2>
                         <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{MissionText}</p>
                     </div>
                 </div>

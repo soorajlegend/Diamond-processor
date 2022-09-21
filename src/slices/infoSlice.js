@@ -7,6 +7,8 @@ const infoSlice = createSlice({
       project: 198,
       client: 75,
       controlAccess: false,
+      alert: '',
+      alertStatus: false,
    },
    reducers: {
       setArabic: (state, action) => {
@@ -24,10 +26,16 @@ const infoSlice = createSlice({
       setControlAccess: (state, action) => {
          state.controlAccess = action.payload;
       },
+      setAlert: (state, action) => {
+         state.alert = action.payload;
+      },
+      setAlertStatus: (state, action) => {
+         state.alertStatus = action.payload;
+      },
    }
 });
 
-export const { setArabic, setUsers, setClient, setProject,setControlAccess} = infoSlice.actions;
+export const { setArabic, setUsers, setClient, setProject,setControlAccess, setAlert, setAlertStatus} = infoSlice.actions;
 
 // selector 
 export const selectArabic = (state) => state.info.arabic;
@@ -35,6 +43,8 @@ export const selectUsers = (state) => state.info.users;
 export const selectProject = (state) => state.info.project;
 export const selectClient = (state) => state.info.client;
 export const selectControlAccess = (state) => state.info.controlAccess;
+export const selectAlert = (state) => state.info.alert;
+export const selectAlertStatus = (state) => state.info.alertStatus;
 
 
 export default infoSlice.reducer;
