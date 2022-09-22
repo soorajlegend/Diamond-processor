@@ -1,30 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import { IoCameraSharp, IoDiamond, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoSnapchat, IoLogoTiktok, IoLogoWhatsapp } from 'react-icons/io5';
-import { Link, Navigate } from 'react-router-dom';
+import { IoDiamond, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoSnapchat, IoLogoTiktok, IoLogoWhatsapp } from 'react-icons/io5';
 import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
-import { useDispatch } from 'react-redux';
-import { setAlert, setAlertStatus } from '../../slices/infoSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectAlertStatus, setAlert, setAlertStatus } from '../../slices/infoSlice';
 import Upload from '../../components/Upload';
 import { Info } from '../../Context/InfoContext';
-import axios from 'axios';
 
 
 
 function InfoPage() {
 
     const dispatch = useDispatch();
-    //         updateName, 
-    //         updateEmail, 
-    //         updateMobile, 
-    //         updateAddress, 
-    //         updateFacebook, 
-    //         updateInstagram, 
-    //         updateWhatsapp, 
-    //         updateLinkedin, 
-    //         updateTiktok, 
-    //         updateSnapchat
+
     const { info,updateInfo } = Info();
+
+    const Status = useSelector(selectAlertStatus);
+
+    const Alert = (e) => {
+        if (Status) {
+            dispatch(setAlert(false));
+    }
+    setTimeout(() => {
+        dispatch(setAlert(e));
+        dispatch(setAlertStatus(true))
+    }, 10)
+
+    setTimeout(() => {
+        dispatch(setAlertStatus(false))
+    }, 5000)
+
+    }
 
     useEffect(() => {
         setName(info.data.name);
@@ -68,19 +74,8 @@ function InfoPage() {
             return response.json();
         }).then(function (data) {
             if (!data.error) {
-                dispatch(setAlert(data.message));
-                dispatch(setAlertStatus(true))
-                updateInfo(name,email,mobile,address,facebook,instagram,whatsapp,linkedIn,tiktok,snapchat)
-                // updateName(name);
-                // updateEmail(email);
-                // updateMobile(mobile);
-                // updateAddress(address);
-                // updateFacebook(facebook);
-                // updateInstagram(instagram);
-                // updateWhatsapp(whatsapp);
-                // updateLinkedin(linkedIn);
-                // updateTiktok(tiktok);
-                // updateSnapchat(snapchat);
+                Alert(data.message);
+                updateInfo(name,email,mobile,address,facebook,instagram,whatsapp,linkedIn,tiktok,snapchat);
             }
         });
 

@@ -1,11 +1,7 @@
 import React from 'react';
-import { IoCameraSharp, IoDiamond, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoSnapchat, IoLogoTiktok, IoLogoWhatsapp } from 'react-icons/io5';
-import { Link, Navigate } from 'react-router-dom';
+import { IoDiamond } from 'react-icons/io5';
 import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
-import Logo from '../../images/logo-mix.png';
-import List from '../../components/subComponent/List';
-import ImageList from '../../components/subComponent/ImageList';
 import { useSelector } from 'react-redux';
 import { selectControlAccess } from '../../slices/infoSlice';
 

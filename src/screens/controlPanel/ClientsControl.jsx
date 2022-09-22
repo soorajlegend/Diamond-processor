@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { IoDiamond } from 'react-icons/io5';
 import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
-import List from '../../components/subComponent/List';
-import { selectControlAccess, setAlert, setAlertStatus } from '../../slices/infoSlice';
+import { selectAlertStatus, setAlert, setAlertStatus } from '../../slices/infoSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import axios from 'axios';
 import { Info } from '../../Context/InfoContext';
@@ -15,7 +14,7 @@ function ClientControl() {
     const [client, setClient] = useState();
     const [selectedFile, setSelectedFile] = useState();
 
-   
+
     const dispatch = useDispatch();
 
     const changeHandler = (event) => {
@@ -34,10 +33,26 @@ function ClientControl() {
 
     const [data, setData] = useState(Clients.data)
 
+    const Status = useSelector(selectAlertStatus);
+
+    const Alert = (e) => {
+        if (Status) {
+            dispatch(setAlert(false));
+    }
+    setTimeout(() => {
+        dispatch(setAlert(e));
+        dispatch(setAlertStatus(true))
+    }, 10)
+
+    setTimeout(() => {
+        dispatch(setAlertStatus(false))
+    }, 5000)
+
+    }
+
     useEffect(() => {
-            setData(Clients.data);
-            console.log(Clients.data)
-        }, [Clients.loading]);
+        setData(Clients.data);
+    }, [Clients.loading]);
 
     const Addclient = (file) => {
         const formData = new FormData();
@@ -52,10 +67,10 @@ function ClientControl() {
         }).then((res) => {
             console.log(res.data)
             let response = res.data;
-            dispatch(setAlert('Uploaded successfully'));
+            Alert('Uploaded successfully');
             dispatch(setAlertStatus(true))
-            
-            let newClient = { id: response.id, name: response.name, image: response.image };
+
+            let newClient = { id: response.id, name: client, image: response.image };
             addClient(newClient);
 
         }, (err) => {
@@ -65,14 +80,18 @@ function ClientControl() {
     }
 
 
-        const DeleteClient = (e, url) => {
-        fetch(url + e, {
-            method: "DELETE"
-        }).then(
-        RemoveClient(e)
-        );
-        dispatch(setAlert('Deleted successfully'));
-        dispatch(setAlertStatus(true))
+    const DeleteClient = (e, url) => {
+        axios({
+            url: url + e,
+            method: "POST",
+            headers: { 'content-type': 'multipart/form-data' },
+
+        }).then(() => {
+            RemoveClient(e);
+            Alert('Deleted successfully');
+        });
+
+
     }
 
 

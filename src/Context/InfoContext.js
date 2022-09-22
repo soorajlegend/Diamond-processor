@@ -1,4 +1,4 @@
-import { data } from "jquery";
+import { data, each } from "jquery";
 import { createContext, useEffect } from "react";
 import { useContext } from "react";
 import { useSelector } from "react-redux";
@@ -97,8 +97,7 @@ export const InfoContextProvider = ({ children }) => {
 
 
     var Clients = useFetch("https://biapay.000webhostapp.com/DP/api/clients/read.php");
-console.log('Clients')
-console.log(Clients.data)
+
     const addClient = (obj) => {
       Clients.data.unshift(obj);
     };
@@ -106,7 +105,9 @@ console.log(Clients.data)
 
     const RemoveClient = (id) => {
       // var arr = Services.data.filter((item) => item.id !== id);
-      Clients.data.splice(features.data.findIndex(a => a.id === id) , 1)
+      Clients.data.splice(Clients.data.findIndex(a => a.id === id) , 1)
+      console.log(id)
+      console.log(Clients.data)
     };
 
 

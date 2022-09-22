@@ -1,12 +1,11 @@
 import React from 'react';
-import { IoCameraSharp, IoDiamond, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoSnapchat, IoLogoTiktok, IoLogoWhatsapp, IoSendOutline, IoSendSharp } from 'react-icons/io5';
+import {IoDiamond } from 'react-icons/io5';
 import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
 import UsersList from '../../components/subComponent/UsersList';
 import Chat from '../../components/subComponent/Chat';
 import { useSelector } from 'react-redux';
 import { selectControlAccess } from '../../slices/infoSlice';
-import { Navigate } from 'react-router-dom';
 
 function Messages() {
     const access = useSelector(selectControlAccess);

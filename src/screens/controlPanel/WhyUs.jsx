@@ -1,18 +1,33 @@
 import React, { useEffect, useState } from 'react';
-import { IoCameraSharp, IoDiamond, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoSnapchat, IoLogoTiktok, IoLogoWhatsapp } from 'react-icons/io5';
-import { Link, Navigate } from 'react-router-dom';
+import { IoDiamond } from 'react-icons/io5';
 import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
-import Logo from '../../images/logo-mix.png';
 import List from '../../components/subComponent/List';
 import { useDispatch, useSelector } from 'react-redux';
 import { Info } from '../../Context/InfoContext';
-import { setAlert, setAlertStatus } from '../../slices/infoSlice';
+import { selectAlertStatus, setAlert, setAlertStatus } from '../../slices/infoSlice';
 
 function WhyUs() {
 
 
     const { features, addFeature, RemoveFeature } = Info();
+
+    const Status = useSelector(selectAlertStatus);
+
+    const Alert = (e) => {
+        if (Status) {
+            dispatch(setAlert(false));
+    }
+    setTimeout(() => {
+        dispatch(setAlert(e));
+        dispatch(setAlertStatus(true))
+    }, 10)
+
+    setTimeout(() => {
+        dispatch(setAlertStatus(false))
+    }, 5000)
+
+    }
 
     useEffect(() => {
         setData(features.data);
@@ -44,8 +59,7 @@ function WhyUs() {
             response = await response.json();
             // setLoading(false)
             if (!response.error) {
-                dispatch(setAlert(response.message));
-                dispatch(setAlertStatus(true))
+                Alert(response.message);
                 let newService = { id: response.id, title: title, description: description };
                 addFeature(newService);
                 console.log(features.data)
@@ -65,8 +79,7 @@ function WhyUs() {
         method: "DELETE"
     });
     RemoveFeature(e);
-    dispatch(setAlert('Deleted successfully'));
-    dispatch(setAlertStatus(true))
+    Alert('Deleted successfully');
     }
 
         return (

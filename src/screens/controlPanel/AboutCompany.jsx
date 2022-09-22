@@ -1,9 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
-import { IoCameraSharp, IoDiamond, IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoSnapchat, IoLogoTiktok, IoLogoWhatsapp } from 'react-icons/io5';
+import React, { useEffect, useState } from 'react';
+import {  IoDiamond,  } from 'react-icons/io5';
 import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
 import { useDispatch, useSelector } from 'react-redux';
-import { setAlert, setAlertStatus } from '../../slices/infoSlice';
+import { selectAlertStatus, setAlert, setAlertStatus } from '../../slices/infoSlice';
 import { Info } from '../../Context/InfoContext';
 
 
@@ -12,6 +12,22 @@ function AboutCompany() {
 
     const { info, updateDesc } = Info();
 
+    const Status = useSelector(selectAlertStatus);
+
+    const Alert = (e) => {
+        if (Status) {
+            dispatch(setAlert(false));
+    }
+    setTimeout(() => {
+        dispatch(setAlert(e));
+        dispatch(setAlertStatus(true))
+    }, 10)
+
+    setTimeout(() => {
+        dispatch(setAlertStatus(false))
+    }, 5000)
+
+    }
 
     useEffect(() => {
         setDescription(info.data.description);
@@ -40,8 +56,7 @@ function AboutCompany() {
         response = await response.json();
         // setLoading(false)
         if (!response.error) {
-            dispatch(setAlert(response.message));
-            dispatch(setAlertStatus(true))
+            Alert(response.message);
             updateDesc(description,mission,vission);
             console.log(info)
 

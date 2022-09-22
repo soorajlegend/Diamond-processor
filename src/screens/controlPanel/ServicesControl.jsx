@@ -4,13 +4,30 @@ import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
 import List from '../../components/subComponent/List';
 import { Info } from '../../Context/InfoContext';
-import { useDispatch } from 'react-redux';
-import { setAlert, setAlertStatus } from '../../slices/infoSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectAlertStatus, setAlert, setAlertStatus } from '../../slices/infoSlice';
 
 function ServicesControl() {
 
 
     const { Services, addRow, RemoveService } = Info();
+
+    const Status = useSelector(selectAlertStatus);
+
+    const Alert = (e) => {
+        if (Status) {
+            dispatch(setAlert(false));
+    }
+    setTimeout(() => {
+        dispatch(setAlert(e));
+        dispatch(setAlertStatus(true))
+    }, 10)
+
+    setTimeout(() => {
+        dispatch(setAlertStatus(false))
+    }, 5000)
+
+    }
 
     useEffect(() => {
         setData(Services.data);
@@ -42,11 +59,9 @@ function ServicesControl() {
             response = await response.json();
             // setLoading(false)
             if (!response.error) {
-                dispatch(setAlert(response.message));
-                dispatch(setAlertStatus(true))
+                Alert(response.message);
                 let newService = { id: response.id, title: title, description: description };
                 addRow(newService);
-                console.log(Services.data)
 
 
             } else {
@@ -62,8 +77,7 @@ function ServicesControl() {
             method: "DELETE"
         });
         RemoveService(e);
-        dispatch(setAlert('Deleted successfully'));
-        dispatch(setAlertStatus(true))
+        Alert('Deleted successfully');
 }
 
 
