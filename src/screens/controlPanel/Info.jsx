@@ -7,14 +7,24 @@ import { useDispatch } from 'react-redux';
 import { setAlert, setAlertStatus } from '../../slices/infoSlice';
 import Upload from '../../components/Upload';
 import { Info } from '../../Context/InfoContext';
+import axios from 'axios';
 
 
 
 function InfoPage() {
 
     const dispatch = useDispatch();
-
-    const { info, updateName,updateEmail, updateMobile, updateAddress, updateFacebook, updateInstagram, updateWhatsapp, updateLinkedin, updateTiktok, updateSnapchat} = Info();
+    //         updateName, 
+    //         updateEmail, 
+    //         updateMobile, 
+    //         updateAddress, 
+    //         updateFacebook, 
+    //         updateInstagram, 
+    //         updateWhatsapp, 
+    //         updateLinkedin, 
+    //         updateTiktok, 
+    //         updateSnapchat
+    const { info,updateInfo } = Info();
 
     useEffect(() => {
         setName(info.data.name);
@@ -47,34 +57,33 @@ function InfoPage() {
         e.preventDefault()
 
         const info = { name, email, mobile, address, facebook, instagram, whatsapp, linkedIn, tiktok, snapchat };
-        console.log(info)
-        // // setLoading(true)
-        let response = await fetch('https://biapay.000webhostapp.com/DP/api/info/info.php', {
-            method: 'POST',
-            headers: { "Content-Type": "application/json","Access-Control-Allow-Origin": "*" },
-            body: JSON.stringify(info)
-        });
-        response = await response.json();
-        // setLoading(false)
-        if (!response.error) {
-            console.log('wow')
-        //     dispatch(setAlert(response.message));
-        //     dispatch(setAlertStatus(true))
-        //     updateName(name);
-        //     updateEmail(email);
-        //     updateMobile(mobile);
-        //     updateAddress(address);
-        //     updateFacebook(facebook);
-        //     updateInstagram(instagram);
-        //     updateWhatsapp(whatsapp);
-        //     updateLinkedin(linkedIn);
-        //     updateTiktok(tiktok);
-        //     updateSnapchat(snapchat);
-        // } else {
-        //     // history.push('/')
-        //     console.log('response.message')
 
-        }
+        fetch("https://biapay.000webhostapp.com/DP/api/info/info.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "text/plain"
+            },
+            body: JSON.stringify(info)
+        }).then(function (response) {
+            return response.json();
+        }).then(function (data) {
+            if (!data.error) {
+                dispatch(setAlert(data.message));
+                dispatch(setAlertStatus(true))
+                updateInfo(name,email,mobile,address,facebook,instagram,whatsapp,linkedIn,tiktok,snapchat)
+                // updateName(name);
+                // updateEmail(email);
+                // updateMobile(mobile);
+                // updateAddress(address);
+                // updateFacebook(facebook);
+                // updateInstagram(instagram);
+                // updateWhatsapp(whatsapp);
+                // updateLinkedin(linkedIn);
+                // updateTiktok(tiktok);
+                // updateSnapchat(snapchat);
+            }
+        });
+
 
     }
 

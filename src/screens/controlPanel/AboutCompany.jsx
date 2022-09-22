@@ -10,7 +10,7 @@ import { Info } from '../../Context/InfoContext';
 
 function AboutCompany() {
 
-    const { info, updateDescription, updateMission, updateVission } = Info();
+    const { info, updateDesc } = Info();
 
 
     useEffect(() => {
@@ -42,16 +42,10 @@ function AboutCompany() {
         if (!response.error) {
             dispatch(setAlert(response.message));
             dispatch(setAlertStatus(true))
-            // Object.assign(info.data.mission, mission);
-            // setUpdateMission(mission)
-            updateDescription(description);
-            updateMission(mission);
-            updateVission(vission);
+            updateDesc(description,mission,vission);
             console.log(info)
-            // console.log(info.data.mission)
 
         } else {
-            // history.push('/')
             console.log(response.message)
 
         }

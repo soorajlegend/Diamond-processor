@@ -19,7 +19,7 @@ function List({ title,data, DelUrl, functions }) {
             {title}
         </h3>
     </div>
-    <ul class="flex flex-col">
+    <ul class="flex flex-col w-full">
         {data.map((item) => (
           <li key={item.id} class="border-gray-400 flex flex-row mb-2">
             <div class="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none cursor-pointer bg-white dark:bg-gray-800/20 shadow-xl rounded-md flex flex-1 items-center p-4">

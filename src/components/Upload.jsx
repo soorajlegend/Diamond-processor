@@ -12,7 +12,11 @@ function Upload() {
 
     const dispatch = useDispatch();
 
-
+    const SaveImage =(url) => {
+        fetch(url , {
+        method: "POST"
+    });
+}
     const changeHandler = (event) => {
         setSelectedFile(event.target.files[0]);
     };
@@ -36,9 +40,13 @@ function Upload() {
 
         }).then((res) => {
             let image = 'https://biapay.000webhostapp.com/DP/api/info/images/' + res.data.image;
+            
+            SaveImage('https://biapay.000webhostapp.com/DP/api/info/dpImage.php?image='+image);
+
             setLogo(image);            
             dispatch(setAlert('Uploaded successfully'));
             dispatch(setAlertStatus(true))
+
         }, (err) => {
             console.log(err);;
         })
