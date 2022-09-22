@@ -71,7 +71,6 @@ export const InfoContextProvider = ({ children }) => {
   };
 
   const RemoveService = (id) => {
-    // var arr = Services.data.filter((item) => item.id !== id);
     Services.data.splice(Services.data.findIndex(a => a.id === id) , 1)
   };
 
@@ -88,7 +87,6 @@ export const InfoContextProvider = ({ children }) => {
 
 
     const RemoveFeature = (id) => {
-      // var arr = Services.data.filter((item) => item.id !== id);
       features.data.splice(features.data.findIndex(a => a.id === id) , 1)
     };
   
@@ -104,12 +102,23 @@ export const InfoContextProvider = ({ children }) => {
 
 
     const RemoveClient = (id) => {
-      // var arr = Services.data.filter((item) => item.id !== id);
       Clients.data.splice(Clients.data.findIndex(a => a.id === id) , 1)
-      console.log(id)
-      console.log(Clients.data)
     };
 
+
+
+
+
+    var Gallery = useFetch("https://biapay.000webhostapp.com/DP/api/gallery/read.php");
+
+    const addImage = (obj) => {
+      Gallery.data.unshift(obj);
+    };
+
+
+    const RemoveImage = (id) => {
+      Gallery.data.splice(Gallery.data.findIndex(a => a.id === id) , 1)
+    };
 
   
 
@@ -126,8 +135,8 @@ export const InfoContextProvider = ({ children }) => {
       console.log('features.data');
       console.log(features.data);
       
-      console.log('info.data');
-      console.log(info.data);
+      console.log('gallery.data');
+      console.log(Clients.data);
     }, [info, alert, Services, features, Clients]);
 
   // console.log(loading)
@@ -139,10 +148,13 @@ export const InfoContextProvider = ({ children }) => {
         Services,
         features,
         Clients,
+        Gallery,
         addClient,
-        RemoveClient,
         addRow,
         addFeature,
+        addImage,
+        RemoveImage,
+        RemoveClient,
         RemoveService,
         RemoveFeature,
         updateInfo,

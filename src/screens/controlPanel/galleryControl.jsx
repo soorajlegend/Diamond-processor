@@ -1,29 +1,102 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoDiamond } from 'react-icons/io5';
 import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
 import ImageList from '../../components/subComponent/ImageList';
-import { useSelector } from 'react-redux';
-import { selectControlAccess } from '../../slices/infoSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectAlertStatus, setAlert, setAlertStatus } from '../../slices/infoSlice';
+import axios from 'axios';
+import { Info } from '../../Context/InfoContext';
 
 function GalleryControl() {
 
-    const access = useSelector(selectControlAccess);
+
+     const [title, setTitle] = useState();
+     const [desc, setDesc] = useState();
+    const [selectedFile, setSelectedFile] = useState();
 
 
-    // if (!access) {
-    //     return (
-    //         <Navigate to="/" replace={true} />
-    //     )
-    // } else {
+    const dispatch = useDispatch();
 
-        const data = [
-            { id: 1, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
-            { id: 2, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
-            { id: 3, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
-            { id: 4, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
-            { id: 5, image: "https://mdbcdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(70).webp" },
-        ]
+    const changeHandler = (event) => {
+        setSelectedFile(event.target.files[0]);
+    };
+
+    const url = 'https://biapay.000webhostapp.com/DP/api/gallery/ImgUpload.php';
+
+    const submitHandler = (e) => {
+        e.preventDefault();
+        AddImage(selectedFile)
+    }
+
+    const { Gallery, addImage, RemoveImage } = Info();
+
+
+    const [data, setData] = useState(Gallery.data)
+
+    const Status = useSelector(selectAlertStatus);
+
+    const Alert = (e) => {
+        if (Status) {
+            dispatch(setAlert(false));
+    }
+    setTimeout(() => {
+        dispatch(setAlert(e));
+        dispatch(setAlertStatus(true))
+    }, 10)
+
+    setTimeout(() => {
+        dispatch(setAlertStatus(false))
+    }, 5000)
+
+    }
+
+    useEffect(() => {
+        setData(Gallery.data);
+    }, [Gallery.loading]);
+
+    const AddImage = (file) => {
+        const formData = new FormData();
+        formData.append('title', title)
+        formData.append('description', desc)
+        formData.append('avatar', file)
+        axios({
+            url: url,
+            method: "POST",
+            headers: { 'content-type': 'multipart/form-data' },
+            data: formData
+
+        }).then((res) => {
+            console.log(res.data)
+            let response = res.data;
+            Alert('Uploaded successfully');
+            dispatch(setAlertStatus(true))
+
+            let newImage = { id: response.id, title: title, image: response.image, date: 'just now' };
+            addImage(newImage);
+
+        }, (err) => {
+            console.log(err);;
+        })
+        // console.log(res);
+    }
+
+
+    const DeleteImage = (e, url) => {
+        axios({
+            url: url + e,
+            method: "DELETE",
+
+        }).then(() => {
+
+            RemoveImage(e);
+            Alert('Deleted successfully');
+        });
+
+
+    }
+
+      
         return (
             <div className='flex flex-row'>
                 <SideBar />
@@ -52,16 +125,16 @@ function GalleryControl() {
                                     <div className="flex flex-col w-full max-w-md p-10 mx-auto my-6 transition duration-500 ease-in-out transform shadow-2xl bg-white dark:bg-gray-900 rounded-lg md:mt-0">
                                         <div className="mt-8">
                                             <div className="mt-6">
-                                                <form action="#" method="POST" className="space-y-6">
+                                                <form  onSubmit={submitHandler} className="space-y-6">
                                                     <p className='text-gray-500'>Add new image</p>
                                                     <div>
                                                         <label HtmlFor="email" className="block text-sm font-medium text-gray-600">Client's Name</label>
                                                         <div className="mt-1">
-                                                            <input name="text" type="text" autocomplete="title" required="" placeholder="Client name" className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
+                                                            <input onChange={(e) => setTitle(e.target.value)} name="title" type="text" autocomplete="title" required="" placeholder="Client name" className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                                                         </div>
                                                         <div>
                                                             <label for="email" className="block my-1 text-sm font-medium text-gray-600"> Description </label>
-                                                            <textarea className="block w-full px-5 py-3 mt-2 text-base text-gray-600 placeholder-gray-500 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-200/50 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500 apearance-none autoexpand" id=" " type="text" name="description" placeholder="Description here..." required=""></textarea>
+                                                            <textarea onChange={(e) => setDesc(e.target.value)} className="block w-full px-5 py-3 mt-2 text-base text-gray-600 placeholder-gray-500 transition duration-500 ease-in-out transform border border-transparent rounded-lg bg-gray-200/50 dark:bg-gray-800 focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500 apearance-none autoexpand" id=" " type="text" name="desc" placeholder="Description here..." required=""></textarea>
                                                         </div>
                                                     </div>
                                                     <div>
@@ -69,7 +142,7 @@ function GalleryControl() {
                                                         <div class="flex justify-center">
                                                             <div class="mb-3 w-96">
                                                                 <label HtmlFor="formFile" class="block text-sm font-medium text-gray-600">Image upload</label>
-                                                                <input class="form-control
+                                                                <input onChange={changeHandler} class="form-control
                                                              block
                                                              w-full
                                                              px-3
@@ -98,8 +171,8 @@ function GalleryControl() {
                                     </div>
                                 </div>
                             </section>
+                            {data != null && <ImageList images={data} functions={DeleteImage} DelUrl="http://localhost/dpAPI/api/gallery/delete.php?id=" />}
 
-                            <ImageList images={data} />
                         </div>
 
 
