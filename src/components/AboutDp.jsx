@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { Info } from '../Context/InfoContext';
 import aboutImage from '../images/banner.png';
 import { selectArabic } from '../slices/infoSlice';
 
@@ -20,8 +21,10 @@ function AboutDp() {
     const VissionTitle = arabic ? "رؤية" : "Vission";
 
     const MissionText = arabic ? "نسعى جاهدين لأن نكون مصدر إلهام في العالم الرقمي لتحقيق أهدافك ونطمح لأن نكون متميزين في العالم العربي." : "We strive to be inspiring in the digital world by achieving your goals and looking forward to be unique in the Arab world";
+   
+    const { info } = Info()
 
-
+    const dp = info.data;
 
     return (
         <div>
@@ -32,7 +35,7 @@ function AboutDp() {
                     <div className="md:w-1/2 block justify-center item-center">
                         <h2 className="md:text-4xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center  arabic-text" >{idText}</h2>
 
-                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{abIdpText}</p>
+                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{dp.description}</p>
                     </div>
 
                 </div>
@@ -41,12 +44,12 @@ function AboutDp() {
 
                     <div className="md:w-1/2  justify-center item-center px-20 mt-5">
                         <h2 className="md:text-5xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center arabic-text" >{MissionTitle}</h2>
-                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{MissionText}</p>
+                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{dp.mission}</p>
                     </div>
 
                     <div className="md:w-1/2  justify-center item-center px-20 mt-5">
                         <h2 className="md:text-5xl font-bold ease-out transition-transform w-full flex py-5 justify-center item-center arabic-text">{VissionTitle}</h2>
-                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{MissionText}</p>
+                        <p className="sm:text-sm  lg:text-xl md:text-xl w-full flex justify-center text-center item-center ease-in-out transition-shadow arabic-text">{dp.vission}</p>
                     </div>
                 </div>
 

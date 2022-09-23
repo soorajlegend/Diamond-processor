@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
+import { Info } from '../Context/InfoContext';
 import { selectArabic } from '../slices/infoSlice';
 
 function Concept({ image }) {
@@ -23,8 +24,12 @@ function Concept({ image }) {
   
   const MgraphicsText  = arabic ? "نحن وكالة فيديو رائدة تربط العلامات التجارية والأشخاص من خلال محتوى فيديو مخصص" : "We are a leader Video Agency that connects brands and people through customized video content.";
 
-  
+  const { Services } = Info();
  
+useEffect(() => {
+
+}, [Services.loading])
+
   return (
     <>
       <section className="max-w-screen-xl mx-auto my-10 bg-white dark:bg-gray-900">
@@ -43,63 +48,22 @@ function Concept({ image }) {
           <div className={arabic ? "arabic-text mt-8 xl:mt-12 lg:flex flex flex-row lg:items-center" : "mt-8 xl:mt-12 lg:flex flex flex-row-reverse lg:items-center"}>
 
             <div className="grid w-full grid-cols-1 gap-8 lg:w-1/2 xl:gap-16 md:grid-cols-2">
-
-              <div className={arabic ? "arabic-text space-y-3 text-right" : "space-y-3"}>
+            {Services.data != null && Services.data.map((row) => 
+             <div key={row.id} className={arabic ? "arabic-text space-y-3 text-right" : "space-y-3"}>
                 <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl dark:text-white dark:bg-gradient-to-b from-green-400 to-green-800">
                   <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </span>
 
-                <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">{DmarkettingTitle}</h1>
+                <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">{row.title}</h1>
 
                 <p className="text-gray-500 dark:text-gray-300">
-                  { DmarkettingText }
+                  { row.description }
                 </p>
               </div>
-
-              <div className={arabic ? "arabic-text space-y-3 text-right" : "space-y-3"}>
-                <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl dark:text-white dark:bg-gradient-to-b from-green-400 to-green-800">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
-                  </svg>
-                </span>
-
-                <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">{ProgrammingTitle}</h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  { programmingText }
-                </p>
-              </div>
-
-              <div className={arabic ? "arabic-text space-y-3 text-right" : "space-y-3"}>
-                <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl dark:text-white dark:bg-gradient-to-b from-green-400 to-green-800">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
-                  </svg>
-                </span>
-
-                <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">{MgraphicTitle}</h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  { MgraphicsText }
-                </p>
-              </div>
-
-              <div className={arabic ? "arabic-text space-y-3 text-right" : "space-y-3"}>
-                <span className="inline-block p-3 text-green-500 bg-green-100 rounded-xl dark:text-white dark:bg-gradient-to-b from-green-400 to-green-800">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                  </svg>
-                </span>
-
-                <h1 className="text-2xl font-semibold text-gray-700 capitalize dark:text-white">{BrandingTitle}</h1>
-
-                <p className="text-gray-500 dark:text-gray-300">
-                  { BrandingTitle }
-                </p>
-              </div>
+            )}
+             
             </div>
 
             <div className="hidden lg:flex lg:w-1/2 lg:justify-center">

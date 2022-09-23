@@ -1,16 +1,42 @@
 import axios from 'axios';
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react'
+import { IoCameraSharp } from 'react-icons/io5';
+import { useDispatch, useSelector } from 'react-redux';
+import { Info } from '../Context/InfoContext';
 import Logo from '../images/logo-mix.png';
-import { setAlert, setAlertStatus } from '../slices/infoSlice';
+import { selectAlertStatus, setAlert, setAlertStatus } from '../slices/infoSlice';
 
 
 function Upload() {
 
     const [selectedFile, setSelectedFile] = useState();
 
+    const Status = useSelector(selectAlertStatus);
+
+    const { info, updateLogo } = Info();
+
+    const Alert = (e) => {
+        if (Status) {
+            dispatch(setAlert(false));
+    }
+    setTimeout(() => {
+        dispatch(setAlert(e));
+        dispatch(setAlertStatus(true))
+    }, 10)
+
+    setTimeout(() => {
+        dispatch(setAlertStatus(false))
+    }, 5000)
+
+    }
+
+    useEffect(() => {
+        setLogo(info.data.Logo);
+    }, [info.loading])
+
 
     const dispatch = useDispatch();
+
 
     const SaveImage =(url) => {
         fetch(url , {
@@ -18,7 +44,9 @@ function Upload() {
     });
 }
     const changeHandler = (event) => {
-        setSelectedFile(event.target.files[0]);
+        setSelectedFile(event.target.files[0]).then(() => {
+        document.querySelector('#upload').click()
+        })
     };
 
     const UPLOAD_ENDPOINT = 'https://biapay.000webhostapp.com/DP/api/info/ImgUpload.php';
@@ -27,6 +55,8 @@ function Upload() {
         e.preventDefault();
         uploadFile(selectedFile)
     }
+
+
     const [logo, setLogo] = useState(Logo);
 
     const uploadFile = (file) => {
@@ -43,9 +73,8 @@ function Upload() {
             
             SaveImage('https://biapay.000webhostapp.com/DP/api/info/dpImage.php?image='+image);
 
-            setLogo(image);            
-            dispatch(setAlert('Uploaded successfully'));
-            dispatch(setAlertStatus(true))
+            updateLogo(image);            
+            Alert('Uploaded successfully');
 
         }, (err) => {
             console.log(err);;
@@ -60,11 +89,11 @@ function Upload() {
         <div>
             {/* content={{title: 'success', status: true, message: 'hello'}} */}
             <form onSubmit={submitHandler} id='imageUploadForm' className='flex flex-col justify-center item-center pt-10'>
-                {/* <IoCameraSharp className='absolute text-2xl text-gray-700 -mr-20 -mb-10 center' onClick={() => document.querySelector('#avatar').click()} /> */}
-                <img alt="profile" src={logo} className="mx-auto relative z-20 object-contain shadow-lg rounded-full h-20 w-20 " />
+                <IoCameraSharp className='absolute text-2xl text-gray-700 -mr-20 -mb-10 center' onClick={() => document.querySelector('#avatar').click()} />
+                <img alt="profile" src={info.data.Logo} className="mx-auto relative z-20 object-contain shadow-lg rounded-full h-20 w-20 " />
                 <div className='flex flex-row justify-center item-center'>
-                    <input type='file' onChange={changeHandler} name='avatar' id='avatar' className='py-2 px-5 rounded-lg' required />
-                    <button type='submit' className='px-2 py-3 rounded-lg '>upload</button>
+                    <input type='file' onChange={changeHandler} name='avatar' id='avatar' className='py-2 px-5 rounded-lg hidden' required />
+                    <button type='submit' id="upload" className='px-2 py-3 rounded-lg hidden'>upload</button>
                 </div>
             </form>
 

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux';
+import { Info } from '../Context/InfoContext';
 import { selectArabic } from '../slices/infoSlice';
 
 function CTA({ title, image1, image2, image3, image4 }) {
@@ -14,7 +15,12 @@ function CTA({ title, image1, image2, image3, image4 }) {
   const design = arabic ? "تصاميم استباقية" : "Proactive Designs";
   const support = arabic ? "دعم 24/24" : "support";
   const time = arabic ? "نصائح مجانية لتحسين وقت العمل" : "Free tips to improve work time";
-  
+  const { info } = Info();
+
+  useEffect(() => {
+
+  }, [info.loading])
+
   return (
     
    
@@ -27,10 +33,10 @@ function CTA({ title, image1, image2, image3, image4 }) {
                     {title}
                 </p>
                 <h4 className="mt-2 text-2xl leading-8 font-extrabold text-gray-900 dark:text-white sm:text-3xl sm:leading-9">
-                   {idText}
+                   {info.data.name}
                 </h4>
                 <p className="mt-4 text-lg leading-6 text-gray-500 dark:text-gray-300">
-                {abIdpText}
+                {info.data.description}
                 </p>
               </div>
                 <ul className="mt-8 md:grid md:grid-cols-2 gap-6">

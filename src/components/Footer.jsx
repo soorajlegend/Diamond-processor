@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Bg from "../images/wave3.png";
 import Bg1 from "../images/wave1.png";
 import Logo from "../images/logo-mix.png";
 import { useSelector } from 'react-redux';
 import { selectArabic } from '../slices/infoSlice';
+import { Info } from '../Context/InfoContext';
+import { IoLogoFacebook, IoLogoInstagram, IoLogoLinkedin, IoLogoSnapchat, IoLogoTiktok, IoLogoWhatsapp } from 'react-icons/io5';
 
 export default function Footer() {
 
@@ -13,7 +15,12 @@ export default function Footer() {
 
     const copyright = arabic ? "معالج ماسي لتكنولوجيا المعلومات — 2020 ©" : "© 2020IT — Diamond processor";
 
-   
+    const { info } = Info();
+
+useEffect(() => {
+  console.log(info.data.Logo)
+}, [info.loading])
+
     return (
   
 
@@ -23,45 +30,33 @@ export default function Footer() {
       <img src={arabic ? Bg1 : Bg} alt="" className='absolute left-0 bottom-0 object-cover h-full w-full xl:mt-10 z-0' />
         <div className={arabic ? 'relative z-auto flex translate-y-32 md:translate-y-0  justify-between flex-row-reverse mt-20 md:mt-5' : 'relative z-auto flex justify-between translate-y-32 md:translate-y-0 flex-row mt-20 md:mt-5'}>
         <a className={arabic ? "arabic-text flex flex-row-reverse title-font font-medium  md:justify-start justify-center text-gray-900" : "flex flex-row title-font font-medium  md:justify-start justify-center text-gray-900"}>
-         <img src={Logo} alt="" className=' w-20 h-10 md:h-auto md:w-52' />
+         <img src={info.data.Logo != '' ? info.data.Logo : Logo} alt="" className=' w-20 h-10 md:h-auto md:w-52' />
         </a>
-        <p className={arabic ? "arabic-text text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 sm:ml-4 sm:pr-4 sm:border-r-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 " : "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100  sm:ml-4 sm:pl-4 sm:border-l-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 "}> {copyright}
-          <a href="https://twitter.com/knyttneve" className=" text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 ml-1" rel="noopener noreferrer" target="_blank">@salem.sa</a>
+        <p className={arabic ? "arabic-text text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 sm:ml-4 sm:pr-4 sm:border-r-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 " : "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100  sm:ml-4 sm:pl-4 sm:border-l-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 "}> © 2020{info.data.name}
+          <a href="https://twitter.com/knyttneve" className=" text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 ml-1" rel="noopener noreferrer" target="_blank">{info.data.email}</a>
         </p>
         </div>
        <div className={arabic ? 'relative z-auto flex  flex-row-reverse' : 'relative z-auto flex  flex-row'}>
        <span className="inline-flex sm:ml-auto   sm:mt-0 mt-4 md:justify-center">
-          <a className="text-gray-100 dark-text-800 dark:text-white">
-            <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-            </svg>
+          
+          <a href={info.data.facebook} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+            <IoLogoFacebook className='text-xl' />
           </a>
-          <a className="ml-3 text-gray-100 dark-text-800 dark:text-white">
-            <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
+          <a href={info.data.instagram} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+           <IoLogoInstagram className='text-xl' />
           </a>
-          <a className="ml-3 text-gray-100 dark-text-800 dark:text-white">
-            <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-            </svg>
+          <a href={info.data.whatsapp} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+          <IoLogoWhatsapp className='text-xl' />
           </a>
-          <a className="ml-3 text-gray-100 dark-text-800 dark:text-white">
-            <svg fill="currentColor" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="0" className="w-5 h-5" viewBox="0 0 24 24">
-              <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-              <circle cx="4" cy="4" r="2" stroke="none"></circle>
-            </svg>
+          <a href={info.data.likedIn} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+          <IoLogoLinkedin className='text-xl' />
           </a>
-          <a className="text-gray-100 dark-text-800 dark:text-white">
-            <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-            </svg>
+          <a href={info.data.tiktok} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+           <IoLogoTiktok className='text-xl' />
           </a>
-          <a className="ml-3 text-gray-100 dark-text-800 dark:text-white">
-            <svg fill="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
+          
+          <a href={info.data.snapchat} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+          <IoLogoSnapchat className='text-xl'/>
           </a>
         </span>
 

@@ -134,7 +134,7 @@ function WhyUs() {
                                 </div>
                             </section>
 
-                        {data != null && <List title="Our services" data={data} functions={DeleteFeature} DelUrl="http://localhost/dpAPI/api/Features/delete.php?id=" />}
+                        {data != null && <List title="Our services" data={data} functions={DeleteFeature} DelUrl="https://biapay.000webhostapp.com/DP/api/features/delete.php?id=" />}
                         </div>
 
 

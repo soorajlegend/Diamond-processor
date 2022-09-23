@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useSelector } from 'react-redux';
+import { Info } from '../Context/InfoContext';
 import { selectArabic } from '../slices/infoSlice';
 
-export const Gallery = ({ galleryImages }) => {
+export const Gallery = () => {
+
+  const { Gallery, info } = Info();
+
+
+  useEffect(() => {
+console.log(Gallery.data)
+  }, [Gallery.loading])
+
 
   const arabic = useSelector(selectArabic); 
 
@@ -17,12 +26,12 @@ export const Gallery = ({ galleryImages }) => {
             <div className="h-1 ml-auto duration-300 origin-left transform bg-deep-purple-accent-400 scale-x-30 group-hover:scale-x-100" />
           </h2>
           <p className={arabic ? "arabic-text text-gray-700 text-right lg:text-sm lg:max-w-md" : "text-gray-700 lg:text-sm lg:max-w-md"}>
-            {"\"" + abIdpText}
+            {"\"" + info.data.description}
           </p>
         </div>
         <div className="grid gap-6 row-gap-5 order-last  mb-8 lg:grid-cols-4 sm:row-gap-6 sm:grid-cols-2">
 
-          {galleryImages.map( (item) => (
+          {Gallery.data != null &&  Gallery.data.map( (item) => 
              <a href="/" aria-label="View Item" key={item.id }>
              <div className="relative overflow-hidden transition duration-200 transform rounded shadow-lg hover:-translate-y-2 hover:shadow-2xl">
                <img
@@ -37,7 +46,7 @@ export const Gallery = ({ galleryImages }) => {
                </div>
              </div>
            </a>
-          ))}
+         )}
         </div>
         <div className="text-center">
           <a
@@ -59,4 +68,4 @@ export const Gallery = ({ galleryImages }) => {
     );
   };
 
-  export default Gallery
+  export default Gallery 

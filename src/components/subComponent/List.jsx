@@ -1,8 +1,5 @@
 import React from 'react';
 import { IoPencilSharp, IoTrashSharp } from 'react-icons/io5';
-import { useDispatch } from 'react-redux';
-import { Info } from '../../Context/InfoContext';
-import { setAlert, setAlertStatus } from '../../slices/infoSlice';
 
 
 function List({ title,data, DelUrl, functions }) {

@@ -46,6 +46,7 @@ export const InfoContextProvider = ({ children }) => {
   // const updateSnapchat = (c) => (info.data.snapchat = c);
 
   const updateLogo = (c) => (info.data.Logo = c);
+
   const updateInfo = (name,email,mobile,address,facebook,instagram,whatsapp,linkedIn,tiktok,snapchat) => {
     info.data.name= name;
     info.data.email=email;
@@ -132,11 +133,7 @@ export const InfoContextProvider = ({ children }) => {
 
 
     useEffect(() => {
-      console.log('features.data');
-      console.log(features.data);
-      
-      console.log('gallery.data');
-      console.log(Clients.data);
+
     }, [info, alert, Services, features, Clients]);
 
   // console.log(loading)

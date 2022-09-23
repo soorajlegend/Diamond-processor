@@ -3,11 +3,13 @@ import { IoListCircleOutline, IoImagesOutline, IoPower, IoCogSharp, IoAlertOutli
 import { Link, useNavigate } from "react-router-dom";
 import Logo from '../images/logo-mix.png';
 import { UserAuth } from '../Context/AuthContext';
+import { Info } from "../Context/InfoContext";
 
 function SideBar() {
 
     const [show, setShow] = useState(false);
 
+    const { info } = Info()
     
     const { user, logout } = UserAuth();
     const navigate = useNavigate(); 
@@ -30,7 +32,7 @@ function SideBar() {
 
                 <div className="px-8">
                     <div className="h-16 w-full flex items-center">
-                        <img src={Logo} className="mt-10" />
+                        <img src={info.data.Logo} className="mt-10" />
                     </div>
                     <ul className="mt-12">
                         <li className="flex w-full justify-between text-gray-700 dark:text-gray-400  hover:text-gray-500 cursor-pointer items-center mb-6">
