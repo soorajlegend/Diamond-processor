@@ -39,23 +39,23 @@ useEffect(() => {
        <div className={arabic ? 'relative z-auto flex  flex-row-reverse' : 'relative z-auto flex  flex-row'}>
        <span className="inline-flex sm:ml-auto   sm:mt-0 mt-4 md:justify-center">
           
-          <a href={info.data.facebook} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+          <a href={info.data.facebook}  target="_blank" className="ml-3 text-gray-100 dark-text-800 dark:text-white">
             <IoLogoFacebook className='text-xl' />
           </a>
-          <a href={info.data.instagram} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+          <a href={info.data.instagram}  target="_blank" className="ml-3 text-gray-100 dark-text-800 dark:text-white">
            <IoLogoInstagram className='text-xl' />
           </a>
-          <a href={info.data.whatsapp} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+          <a href={info.data.whatsapp}  target="_blank" className="ml-3 text-gray-100 dark-text-800 dark:text-white">
           <IoLogoWhatsapp className='text-xl' />
           </a>
-          <a href={info.data.likedIn} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+          <a href={info.data.likedIn}  target="_blank" className="ml-3 text-gray-100 dark-text-800 dark:text-white">
           <IoLogoLinkedin className='text-xl' />
           </a>
-          <a href={info.data.tiktok} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+          <a href={info.data.tiktok}  target="_blank" className="ml-3 text-gray-100 dark-text-800 dark:text-white">
            <IoLogoTiktok className='text-xl' />
           </a>
           
-          <a href={info.data.snapchat} className="ml-3 text-gray-100 dark-text-800 dark:text-white">
+          <a href={info.data.snapchat}  target="_blank" className="ml-3 text-gray-100 dark-text-800 dark:text-white">
           <IoLogoSnapchat className='text-xl'/>
           </a>
         </span>

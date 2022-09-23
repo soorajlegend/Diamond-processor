@@ -169,31 +169,31 @@ export default function Navigation() {
                             <ul className={arabic ? "arabic-text flex flex-row-reverse justify-center items-center h-full" : "flex  flex-row justify-center right-0 item-center"}>
                                 <div className={arabic ? "arabic-text flex justify-center flex-row-reverse md:justify-center items-center h-full w-full md:w-auto md:items-center space-x-6 " : "flex justify-center md:justify-center items-center h-full w-full md:w-auto md:items-center space-x-6 "}>
                                     
-                                    <a href={info.data.facebook}><li className="w-10 h-10 mx-2 pointer pt-2  flex justify-center item-center">
+                                    <a href={info.data.facebook}><li className="w-10 h-10 mx-2 pointer pt-2  flex justify-center item-center"  target="_blank">
                                     <IoLogoFacebook className="text-2xl" />
                                     </li>
                                     </a>
-                                    <a href={info.data.instagram}>
+                                    <a href={info.data.instagram}  target="_blank">
                                     <li className="w-10 h-10 mx-2 pointer  pt-2  flex justify-center item-center">
                                        <IoLogoInstagram className="text-2xl" />
                                     </li>
                                     </a>
-                                    <a href={info.data.whatsapp}>
+                                    <a href={info.data.whatsapp}  target="_blank">
                                     <li className="w-10 h-10 mx-2 pointer  pt-2  flex justify-center item-center">
                                        
                                        <IoLogoWhatsapp className="text-2xl" />
                                     </li>
                                     </a>
-                                    <a href={info.data.linkedIn}>
+                                    <a href={info.data.linkedIn}  target="_blank">
                                     <li className="w-10 h-10 mx-2 pointer  pt-2  flex justify-center item-center">
                                        <IoLogoLinkedin className="text-2xl" />
                                     </li></a>
-                                    <a href={info.data.tiktok}>
+                                    <a href={info.data.tiktok}  target="_blank">
                                     <li className="w-10 h-10 mx-2 pointer  pt-2  flex justify-center item-center">
                                         <IoLogoTiktok className="text-2xl" />
                                     </li>
                                     </a>
-                                    <a href={info.data.snapchat}>
+                                    <a href={info.data.snapchat}  target="_blank">
                                     <li className="w-10 h-10 mx-2 pointer  pt-2  flex justify-center item-center">
                                         <IoLogoSnapchat className="text-2xl" />
                                     </li>
