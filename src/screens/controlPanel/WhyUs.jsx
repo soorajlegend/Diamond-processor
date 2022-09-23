@@ -47,13 +47,12 @@ function WhyUs() {
 
         if (title.length < 1 || description.length < 1) {
 
-            console.log('all these field are required');
+            Alert('all these field are required');
 
         } else {
 
-            let response = await fetch('http://localhost/dpAPI/api/Features/create.php', {
+            let response = await fetch('https://biapay.000webhostapp.com/DP/api/features/create.php', {
                 method: 'POST',
-                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(info)
             });
             response = await response.json();
@@ -76,7 +75,7 @@ function WhyUs() {
 
     const DeleteFeature =(e, url) => {
         fetch(url + e, {
-        method: "DELETE"
+        method: "POST"
     });
     RemoveFeature(e);
     Alert('Deleted successfully');
@@ -111,9 +110,9 @@ function WhyUs() {
                                         <div className="mt-8">
                                             <div className="mt-6">
                                             <form onSubmit={SaveFeature} action="#" method="POST" className="space-y-6">
-                                                <p className='text-gray-500'>Add new service</p>
+                                                <p className='text-gray-500'>Add new features</p>
                                                 <div>
-                                                    <label for="email" className="block text-sm font-medium text-gray-600">Service</label>
+                                                    <label for="email" className="block text-sm font-medium text-gray-600">Feature</label>
                                                     <div className="mt-1">
                                                         <input name="text" required="" onChange={(e) => setTitle(e.target.value)} type="text" autocomplete="title"  placeholder="Service title" className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/90 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                                                     </div>
@@ -134,7 +133,7 @@ function WhyUs() {
                                 </div>
                             </section>
 
-                        {data != null && <List title="Our services" data={data} functions={DeleteFeature} DelUrl="https://biapay.000webhostapp.com/DP/api/features/delete.php?id=" />}
+                        {data != null && <List title="Our features" data={data} functions={DeleteFeature} DelUrl="https://biapay.000webhostapp.com/DP/api/features/delete.php?id=" />}
                         </div>
 
 

@@ -163,27 +163,6 @@ export const InfoContextProvider = ({ children }) => {
     </InfoContext.Provider>
   );
 };
-// info,
-// Services,
-// features,
-// addRow,
-// addFeature,
-// RemoveService,
-// updateName,
-// updateEmail,
-// updateMobile,
-// updateAddress,
-// updateDescription,
-// updateMission,
-// updateVission,
-// updateLogo,
-// updateFacebook,
-// updateInstagram,
-// updateWhatsapp,
-// updateLinkedin,
-// updateTiktok,
-// updateSnapchat,
-
 
 
 export const Info = () => {

@@ -81,7 +81,7 @@ function AboutCompany() {
 
                             <div className="px-4 py-2 w-full">
                                 <div className="flex justify-center md:justify-start w-full">
-                                    <span className="font-semibold text-2xl  text-emerald-500 dark:text-emerald-400"> Company Basic info</span>
+                                    <span className="font-semibold text-2xl  text-emerald-500 dark:text-emerald-400">About Company</span>
                                 </div>
                             </div>
                         </div>

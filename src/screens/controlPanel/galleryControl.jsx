@@ -128,7 +128,7 @@ function GalleryControl() {
                                                 <form  onSubmit={submitHandler} className="space-y-6">
                                                     <p className='text-gray-500'>Add new image</p>
                                                     <div>
-                                                        <label HtmlFor="email" className="block text-sm font-medium text-gray-600">Client's Name</label>
+                                                        <label HtmlFor="email" className="block text-sm font-medium text-gray-600">Title</label>
                                                         <div className="mt-1">
                                                             <input onChange={(e) => setTitle(e.target.value)} name="title" type="text" autocomplete="title" required="" placeholder="Client name" className="block w-full px-5 py-3 text-base text-gray-600 bg-gray-200/50 dark:bg-gray-800 transition duration-500 ease-in-out transform border border-transparent rounded-lg focus:outline-none focus:border-transparent focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 focus:ring-offset-gray-500" />
                                                         </div>
