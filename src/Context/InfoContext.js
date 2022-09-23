@@ -1,4 +1,3 @@
-import { data, each } from "jquery";
 import { createContext, useEffect } from "react";
 import { useContext } from "react";
 import { useSelector } from "react-redux";

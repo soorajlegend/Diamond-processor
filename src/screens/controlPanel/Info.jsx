@@ -45,7 +45,7 @@ function InfoPage() {
         setTiktok(info.data.tiktok);
         setSnapchat(info.data.snapchat);
 
-    }, [info.loading])
+    }, [Status,info])
 
 
     const [name, setName] = useState(info.data.name);
@@ -112,9 +112,9 @@ function InfoPage() {
                         <div className="">
 
 
-                            <a href="#" className="flex flex-row w-full justify-center items-center relative col-span-full">
+                            <div className="flex flex-row w-full justify-center items-center relative col-span-full">
                                 <Upload />
-                            </a>
+                            </div>
                             <form onSubmit={handleSubmit} className=' grid grid-cols-1 gap-6 mt-8 md:grid-cols-3'>
                                 <div>
                                     <label className="block mb-2 text-sm text-gray-700 ">Company name</label>

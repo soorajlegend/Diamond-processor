@@ -1,6 +1,5 @@
-import { click } from '@testing-library/user-event/dist/click';
 import React, { useState } from 'react'
-import { IoCheckmarkDoneSharp, IoCloseCircleOutline } from 'react-icons/io5';
+import { IoCheckmarkDoneSharp } from 'react-icons/io5';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectAlert, selectAlertStatus, setAlertStatus } from '../../slices/infoSlice';
 

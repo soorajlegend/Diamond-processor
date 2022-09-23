@@ -10,21 +10,21 @@ function AllServices({ image }) {
 
     const ourServicesTitle = arabic ? "اكتشف خدماتنا" : "explore our Services";
 
-    const ProgrammingTitle = arabic ? "برمجة" : "Programming";
+    // const ProgrammingTitle = arabic ? "برمجة" : "Programming";
 
-    const DmarkettingTitle  = arabic ? "التسويق الرقمي" : "Digital Marketing";
+    // const DmarkettingTitle  = arabic ? "التسويق الرقمي" : "Digital Marketing";
 
-    const MgraphicTitle  = arabic ? "السوم المتحركة" : "Motion Graphic";
+    // const MgraphicTitle  = arabic ? "السوم المتحركة" : "Motion Graphic";
 
-    const BrandingTitle = arabic  ? "العلامة التجارية" : "Branding";
+    // const BrandingTitle = arabic  ? "العلامة التجارية" : "Branding";
 
-    const  programmingText = arabic  ? "فرق مشروعنا مع مطورين من المستوى الأعلى يقدمون بنجاح حلولًا لأي تعقيد تتطلب معرفة ممتازة بجافا والواجهة الأمامية والجوال بالإضافة إلى الخبرة في تطوير التطبيقات السحابية الأصلية وهندسة البيانات والذكاء الاصطناعي. نحن نقدم دورة تطوير كاملة من الألف إلى الياء" : "Our project teams with higher level developers who successfully deliver solutions of any complexity that require outstanding knowledge of  Java, front end and mobile as well as the expertise in cloud-native app development, data engineering, and artificial intelligence. We offer a full development cycle from A to Z";
+    // const  programmingText = arabic  ? "فرق مشروعنا مع مطورين من المستوى الأعلى يقدمون بنجاح حلولًا لأي تعقيد تتطلب معرفة ممتازة بجافا والواجهة الأمامية والجوال بالإضافة إلى الخبرة في تطوير التطبيقات السحابية الأصلية وهندسة البيانات والذكاء الاصطناعي. نحن نقدم دورة تطوير كاملة من الألف إلى الياء" : "Our project teams with higher level developers who successfully deliver solutions of any complexity that require outstanding knowledge of  Java, front end and mobile as well as the expertise in cloud-native app development, data engineering, and artificial intelligence. We offer a full development cycle from A to Z";
     
-    const  DmarkettingText = arabic  ? "يتضمن التسويق عبر الإنترنت مجموعة متنوعة من القنوات مثل التسويق عبر البريد الإلكتروني ، وإعلانات الفيديو ، والتسويق المؤثر ، وإعلانات الدفع لكل نقرة ، والتسويق عبر وسائل التواصل الاجتماعي ، والمزيد. قد يكون اختيار القناة التسويقية التي تناسب عملك بشكل أفضل أمرًا صعبًا" : "Our online marketing includes a variety of channels such as email marketing, video advertising, influencer marketing, PPC advertising, social media marketing, and more. Choosing the marketing channel that fits your business the best can be tricky. ";
+    // const  DmarkettingText = arabic  ? "يتضمن التسويق عبر الإنترنت مجموعة متنوعة من القنوات مثل التسويق عبر البريد الإلكتروني ، وإعلانات الفيديو ، والتسويق المؤثر ، وإعلانات الدفع لكل نقرة ، والتسويق عبر وسائل التواصل الاجتماعي ، والمزيد. قد يكون اختيار القناة التسويقية التي تناسب عملك بشكل أفضل أمرًا صعبًا" : "Our online marketing includes a variety of channels such as email marketing, video advertising, influencer marketing, PPC advertising, social media marketing, and more. Choosing the marketing channel that fits your business the best can be tricky. ";
     
-    const MgraphicsText  = arabic ? "نحن وكالة فيديو رائدة تربط العلامات التجارية والأشخاص من خلال محتوى فيديو مخصص" : "We are a leader Video Agency that connects brands and people through customized video content.";
+    // const MgraphicsText  = arabic ? "نحن وكالة فيديو رائدة تربط العلامات التجارية والأشخاص من خلال محتوى فيديو مخصص" : "We are a leader Video Agency that connects brands and people through customized video content.";
 
-    const BrandingText = arabic  ? "مهما كان حجم شركتك ، نقوم بإنشاء علامات تجارية تنقل عروضك بشكل مثالي وتعزز مكانتك في السوق من خلال الدمج المثالي للعناصر المرئية والنسخ" : "Whatever the size of your company, we create brands that perfectly communicate your offering and solidify your position in the market through a pitch perfect amalgamation of visuals and copy.";
+    // const BrandingText = arabic  ? "مهما كان حجم شركتك ، نقوم بإنشاء علامات تجارية تنقل عروضك بشكل مثالي وتعزز مكانتك في السوق من خلال الدمج المثالي للعناصر المرئية والنسخ" : "Whatever the size of your company, we create brands that perfectly communicate your offering and solidify your position in the market through a pitch perfect amalgamation of visuals and copy.";
 
 
     const { Services } = Info()

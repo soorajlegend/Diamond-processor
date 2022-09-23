@@ -14,17 +14,17 @@ function Whyus() {
 
   const WhyUs = arabic ? "لماذا نحن" : "Why Us";
 
-  const DesignTitle = arabic ? "التصميم" : "The design";
+//   const DesignTitle = arabic ? "التصميم" : "The design";
 
-  const DesignText = arabic ? "نصمم وفقًا لاحتياجاتك بناءً على أفضل المعايير الفنية" : " We design according to your needs based on the best technical standards.";
+//   const DesignText = arabic ? "نصمم وفقًا لاحتياجاتك بناءً على أفضل المعايير الفنية" : " We design according to your needs based on the best technical standards.";
 
-  const DevelopmentTitle = arabic ? "تطوير" : "Development";
+//   const DevelopmentTitle = arabic ? "تطوير" : "Development";
 
-  const DevelopmentText= arabic ? "يقوم فريق التطوير لدينا بتطوير النظام وتحقيق أقصى قدر من المرونة" : "Our development team develops the system and achieves the maximum flexibility.";
+//   const DevelopmentText= arabic ? "يقوم فريق التطوير لدينا بتطوير النظام وتحقيق أقصى قدر من المرونة" : "Our development team develops the system and achieves the maximum flexibility.";
 
-  const EmpowermentTitle = arabic ? "التمكين" : "Empowerment";
+//   const EmpowermentTitle = arabic ? "التمكين" : "Empowerment";
   
-  const EmpowermentText = arabic ? "يتم تسليم العينات بأعلى المواصفات الفنية مع إدارة الوقت" : "The samples are delivered with the highest technical specification with time management";
+//   const EmpowermentText = arabic ? "يتم تسليم العينات بأعلى المواصفات الفنية مع إدارة الوقت" : "The samples are delivered with the highest technical specification with time management";
 
 const {  features } = Info()
 
@@ -33,7 +33,7 @@ const {  features } = Info()
 
 useEffect(() => {
     console.log(features)
-}, [arabic, features.loading]);
+}, [arabic, features]);
 
 
   return (

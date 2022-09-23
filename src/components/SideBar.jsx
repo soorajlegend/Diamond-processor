@@ -32,7 +32,7 @@ function SideBar() {
 
                 <div className="px-8">
                     <div className="h-16 w-full flex items-center">
-                        <img src={info.data.Logo} className="mt-10" />
+                        <img src={info.data.Logo} alt='top logo' className="mt-10" />
                     </div>
                     <ul className="mt-12">
                         <li className="flex w-full justify-between text-gray-700 dark:text-gray-400  hover:text-gray-500 cursor-pointer items-center mb-6">
@@ -165,7 +165,7 @@ function SideBar() {
                 </div>
                 <div className="px-8">
                     <div className="h-16 w-full flex items-center">
-                        <img src={Logo} className="mt-10" />
+                        <img src={Logo} alt='top logo' className="mt-10" />
                     </div>
                     <ul className="mt-12">
                         <li className="flex w-full justify-between relative z-50 text-gray-300 hover:text-gray-500 cursor-pointer items-center mb-6">

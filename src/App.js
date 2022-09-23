@@ -1,7 +1,7 @@
 // import Nav from "./components/Nav";
 import React, { Suspense } from "react";
 import {
-  BrowserRouter as Router,
+  BrowserRouter as 
   Routes,
   Route,
   useLocation,

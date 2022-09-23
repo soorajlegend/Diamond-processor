@@ -2,12 +2,9 @@ import React from 'react';
 import { IoDiamond } from 'react-icons/io5';
 import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
-import { useSelector } from 'react-redux';
-import { selectControlAccess } from '../../slices/infoSlice';
 
 function Setting() {
 
-    const access = useSelector(selectControlAccess);
 
 
     // if (!access) {

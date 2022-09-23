@@ -15,8 +15,8 @@ function Chat({ title, data }) {
                         <div className='h-96 max-h-96 overflow-y-scroll'>
                            {data
                            .map((item) => (
-                            <div  key={item.id} className= {item.sender == "admin" ? "flex w-full justify-end text-sm" : "flex w-full text-sm"}>
-                            <p className={item.sender == "admin" ? "w-2/3  mx-5 rounded-xl my-2 px-10 py-5 dark:bg-gray-900 bg-gray-100 shadow-xl" : "w-2/3 mx-5 rounded-xl my-2 px-10 py-5 bg-gray-300/50 dark:bg-gray-700 shadow-xl"}>{item.message}</p>
+                            <div  key={item.id} className= {item.sender === "admin" ? "flex w-full justify-end text-sm" : "flex w-full text-sm"}>
+                            <p className={item.sender === "admin" ? "w-2/3  mx-5 rounded-xl my-2 px-10 py-5 dark:bg-gray-900 bg-gray-100 shadow-xl" : "w-2/3 mx-5 rounded-xl my-2 px-10 py-5 bg-gray-300/50 dark:bg-gray-700 shadow-xl"}>{item.message}</p>
                             </div>
                           ))
                            }

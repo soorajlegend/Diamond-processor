@@ -34,7 +34,7 @@ function AboutCompany() {
         setMission(info.data.mission);
         setVission(info.data.vission);
         console.log(info)
-    }, [info.loading])
+    }, [Status,info])
 
 
     const dispatch = useDispatch();

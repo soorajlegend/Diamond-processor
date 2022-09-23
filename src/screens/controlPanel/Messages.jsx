@@ -4,11 +4,8 @@ import SideBar from '../../components/SideBar';
 import AnimatedPage from '../../animation.js';
 import UsersList from '../../components/subComponent/UsersList';
 import Chat from '../../components/subComponent/Chat';
-import { useSelector } from 'react-redux';
-import { selectControlAccess } from '../../slices/infoSlice';
 
 function Messages() {
-    const access = useSelector(selectControlAccess);
 
 
     // if (!access) {

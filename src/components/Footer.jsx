@@ -11,15 +11,15 @@ export default function Footer() {
 
   const arabic = useSelector(selectArabic); 
 
-    const idText = arabic ? "معالج ماسي لتكنولوجيا المعلومات" : "Diamond processor";
+    // const idText = arabic ? "معالج ماسي لتكنولوجيا المعلومات" : "Diamond processor";
 
-    const copyright = arabic ? "معالج ماسي لتكنولوجيا المعلومات — 2020 ©" : "© 2020IT — Diamond processor";
+    // const copyright = arabic ? "معالج ماسي لتكنولوجيا المعلومات — 2020 ©" : "© 2020IT — Diamond processor";
 
     const { info } = Info();
 
 useEffect(() => {
   console.log(info.data.Logo)
-}, [info.loading])
+}, [info])
 
     return (
   
@@ -30,7 +30,7 @@ useEffect(() => {
       <img src={arabic ? Bg1 : Bg} alt="" className='absolute left-0 bottom-0 object-cover h-full w-full xl:mt-10 z-0' />
         <div className={arabic ? 'relative z-auto flex translate-y-32 md:translate-y-0  justify-between flex-row-reverse mt-20 md:mt-5' : 'relative z-auto flex justify-between translate-y-32 md:translate-y-0 flex-row mt-20 md:mt-5'}>
         <a className={arabic ? "arabic-text flex flex-row-reverse title-font font-medium  md:justify-start justify-center text-gray-900" : "flex flex-row title-font font-medium  md:justify-start justify-center text-gray-900"}>
-         <img src={info.data.Logo != '' ? info.data.Logo : Logo} alt="" className=' w-20 h-10 md:h-auto md:w-52' />
+         <img src={info.data.Logo !== '' ? info.data.Logo : Logo} alt="" className=' w-20 h-10 md:h-auto md:w-52' />
         </a>
         <p className={arabic ? "arabic-text text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 sm:ml-4 sm:pr-4 sm:border-r-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 " : "text-sm text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100  sm:ml-4 sm:pl-4 sm:border-l-2 dark:border-gray-800 sm:border-gray-100 sm:py-2 sm:mt-0 "}> © 2020{info.data.name}
           <a href="https://twitter.com/knyttneve" className=" text-gray-800 dark:text-gray-100 md:dark:text-white md:text-gray-100 ml-1" rel="noopener noreferrer" target="_blank">{info.data.email}</a>

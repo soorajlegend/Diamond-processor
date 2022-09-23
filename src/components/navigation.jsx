@@ -50,7 +50,7 @@ export default function Navigation() {
                             <div className="px-6 pt-4  w-full min-h-screen bg-white dark:bg-gray-900/100 shadow-lg">
                                 <div className="flex items-center justify-between">
                                     <div className={arabic ? "arabic-text flex flex-row-reverse items-center" : "flex items-center"}>
-                                        <img src={info.data.Logo} alt="logo2" className="h-8" />
+                                        <img src={info.data.Logo === '' ? Logo : info.data.Logo} alt="logo2" className="h-8" />
                                     </div>
                                     <div id="cross" className="bg-white dark:bg-gray-900/100 text-gray-500" onClick={() => setShow(!show)}>
                                         <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-x" width={24} height={24} viewBox="0 0 24 24" strokeWidth={1} stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
@@ -153,7 +153,7 @@ export default function Navigation() {
                     <div className={arabic ? "arabic-text container justify-between bg-white dark:bg-gray-900/100 h-16 flex  flex-row-reverse items-center lg:items-stretch mx-auto" : "container justify-between bg-white dark:bg-gray-900/100 h-16 flex items-center lg:items-stretch mx-auto"}>
                         <div className={arabic ? "arabic-text bg-white dark:bg-gray-900/100 flex  flex-row-reverse items-center" : "bg-white dark:bg-gray-900/100 flex items-center"}>
                             <div className={arabic ? "arabic-text flex flex-row-reverse -mr-[30px] md:-mr-0 md:ml-10 items-center " : "-ml-[30px] md:-ml-0 md:mr-10  flex items-center "}>
-                                <img src={info.data.Logo} alt="logo" className="h-10" />
+                                <img src={info.data.Logo === '' ? Logo : info.data.Logo} alt="logo" className="h-10" />
                             </div>
                             <ul className={arabic ? "arabic-text pr-12 xl:flex  flex-row-reverse items-center  hidden" : "pr-12 xl:flex items-center  hidden"}>
                                 <li className={active === 'home' ? "cursor-pointer h-full flex items-center text-sm text-green-300 tracking-normal pb-4 mr-5 mt-4 border-b-2 border-green-300" : "cursor-pointer h-full flex items-center text-sm text-gray-500 tracking-normal pb-4 mr-5 mt-4"} onClick={() => setActive('home')}><Link to="/">{homeText}</Link></li>

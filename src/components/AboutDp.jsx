@@ -14,13 +14,13 @@ function AboutDp() {
 
     const idText = arabic ? "معالج ماسي لتكنولوجيا المعلومات" : "IT Diamond processor";
 
-    const abIdpText = arabic ? "لقد تطور العالم الرقمي بشكل سريع وطغى على جميع جوانب الحياة ، وأصبحت التكنولوجيا شريانًا أساسيًا في عصرنا ، ونحن في مؤسسة معالج الألماس لتكنولوجيا المعلومات ، نسعى إلى تحقيق طموحاتك الرقمية باحترافية عالية وبيد سعودية قادرة ، لنخلق لك من طموحات التكنولوجيا التي تحتضن السماء" : "The digital world has developed rapidly and has overwhelmed all aspects of life and technology has become a fundamental artery in our time, and we at the Diamond Processor Foundation for Information Technology, seek to achieve your digital ambitions with high professionalism and with a capable Saudi hand, to create for you from technology ambitions that embrace the sky"
+    // const abIdpText = arabic ? "لقد تطور العالم الرقمي بشكل سريع وطغى على جميع جوانب الحياة ، وأصبحت التكنولوجيا شريانًا أساسيًا في عصرنا ، ونحن في مؤسسة معالج الألماس لتكنولوجيا المعلومات ، نسعى إلى تحقيق طموحاتك الرقمية باحترافية عالية وبيد سعودية قادرة ، لنخلق لك من طموحات التكنولوجيا التي تحتضن السماء" : "The digital world has developed rapidly and has overwhelmed all aspects of life and technology has become a fundamental artery in our time, and we at the Diamond Processor Foundation for Information Technology, seek to achieve your digital ambitions with high professionalism and with a capable Saudi hand, to create for you from technology ambitions that embrace the sky"
 
     const MissionTitle = arabic ? "بعثة" : "Mission";
 
     const VissionTitle = arabic ? "رؤية" : "Vission";
 
-    const MissionText = arabic ? "نسعى جاهدين لأن نكون مصدر إلهام في العالم الرقمي لتحقيق أهدافك ونطمح لأن نكون متميزين في العالم العربي." : "We strive to be inspiring in the digital world by achieving your goals and looking forward to be unique in the Arab world";
+    // const MissionText = arabic ? "نسعى جاهدين لأن نكون مصدر إلهام في العالم الرقمي لتحقيق أهدافك ونطمح لأن نكون متميزين في العالم العربي." : "We strive to be inspiring in the digital world by achieving your goals and looking forward to be unique in the Arab world";
    
     const { info } = Info()
 

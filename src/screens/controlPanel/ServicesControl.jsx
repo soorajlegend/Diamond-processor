@@ -32,7 +32,7 @@ function ServicesControl() {
     useEffect(() => {
         setData(Services.data);
         console.log(Services.data)
-    }, [Services.loading]);
+    }, [Status, Services]);
     const dispatch = useDispatch();
 
     const [data, setData] = useState(Services.data)

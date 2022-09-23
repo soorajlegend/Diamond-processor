@@ -1,9 +1,8 @@
 import React from 'react'
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Link, Navigate, Router, Routes, useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { selectArabic } from '../slices/infoSlice';
-import { selectControlAccess, setControlAccess } from "../slices/infoSlice";
 import { UserAuth } from '../Context/AuthContext';
 
 
@@ -12,10 +11,7 @@ import { UserAuth } from '../Context/AuthContext';
 function Form() {
 
     const arabic = useSelector(selectArabic);
-    const dispatch = useDispatch();
 
-    const access = useSelector(selectControlAccess);
-    const changeAccess = () => dispatch(setControlAccess(access ? false : true));
 
 
     const title = arabic ? "تسجيل الدخول" : "Sign in.";
@@ -87,7 +83,7 @@ function Form() {
                                             </div>
 
                                             <div className="text-sm">
-                                                <a href="#" className="font-medium text-green-600 hover:text-green-500">{forgot}</a>
+                                                <p className="font-medium text-green-600 hover:text-green-500">{forgot}</p>
                                             </div>
                                         </div>
 

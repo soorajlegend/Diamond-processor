@@ -32,7 +32,7 @@ function Upload() {
 
     useEffect(() => {
         setLogo(info.data.Logo);
-    }, [info.loading])
+    }, [info])
 
 
     const dispatch = useDispatch();
@@ -90,7 +90,7 @@ function Upload() {
             {/* content={{title: 'success', status: true, message: 'hello'}} */}
             <form onSubmit={submitHandler} id='imageUploadForm' className='flex flex-col justify-center item-center pt-10'>
                 <IoCameraSharp className='absolute text-2xl text-gray-700 -mr-20 -mb-10 center' onClick={() => document.querySelector('#avatar').click()} />
-                <img alt="profile" src={info.data.Logo} className="mx-auto relative z-20 object-contain shadow-lg rounded-full h-20 w-20 " />
+                <img alt="profile"  src={info.data.Logo === '' ? logo : info.data.Logo} className="mx-auto relative z-20 object-contain shadow-lg rounded-full h-20 w-20 " />
                 <div className='flex flex-row justify-center item-center'>
                     <input type='file' onChange={changeHandler} name='avatar' id='avatar' className='py-2 px-5 rounded-lg hidden' required />
                     <button type='submit' id="upload" className='px-2 py-3 rounded-lg hidden'>upload</button>

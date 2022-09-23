@@ -52,7 +52,7 @@ function ClientControl() {
 
     useEffect(() => {
         setData(Clients.data);
-    }, [Clients.loading]);
+    }, [Status,Clients]);
 
     const Addclient = (file) => {
         const formData = new FormData();

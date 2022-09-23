@@ -18,7 +18,7 @@ function Customers() {
 
   useEffect(() => {
     console.log(Clients.data)
-  }, [Clients.loading])
+  }, [Clients])
 
 
   return (
@@ -46,7 +46,7 @@ function Customers() {
                   {Clients.data != null && Clients.data.map((row) => 
                   
                   <div className='w-full flex justify-center px-5 py-2' key={row.id}>
-                     <img src={row.image} className="h-20 rounded-md shadow-xl" viewBox="0 0 100 26" />
+                     <img src={row.image} className="h-20 rounded-md shadow-xl" alt='client logo' viewBox="0 0 100 26" />
                   </div>
                  
                   )}

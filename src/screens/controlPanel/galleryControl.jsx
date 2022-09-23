@@ -53,7 +53,7 @@ function GalleryControl() {
 
     useEffect(() => {
         setData(Gallery.data);
-    }, [Gallery.loading]);
+    }, [Status, Gallery]);
 
     const AddImage = (file) => {
         const formData = new FormData();

@@ -31,8 +31,7 @@ function WhyUs() {
 
     useEffect(() => {
         setData(features.data);
-        console.log(features.data)
-    }, [features.loading]);
+    }, [Status, features]);
     const dispatch = useDispatch();
 
     const [data, setData] = useState(features.data)

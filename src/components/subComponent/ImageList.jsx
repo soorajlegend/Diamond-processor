@@ -1,5 +1,5 @@
 import React from 'react'
-import { IoPencilSharp, IoTrashSharp } from 'react-icons/io5'
+import { IoTrashSharp } from 'react-icons/io5'
 
 // function List({ title,data, DelUrl, functions }) {
     function ImageList({images, DelUrl, functions}) {
