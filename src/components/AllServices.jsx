@@ -33,13 +33,6 @@ function AllServices({ image }) {
     }, [Services.loading]);
 
 
-    const data = [
-        {id: 1, title: "best", description: "wowowowowowowowo"},
-        {id: 2, title: "best", description: "wowowowowowowowo"},
-        {id: 3, title: "best", description: "wowowowowowowowo"},
-        {id: 4, title: "best", description: "wowowowowowowowo"},
-    ]
-
     return (
     <>
     <section className={arabic ? "arabic-text max-w-screen-xl relative z-20 mx-auto my-10 bg-white dark:bg-gray-900" : "max-w-[80%] mx-auto my-10 relative z-20 bg-white dark:bg-gray-900"}>
@@ -59,7 +52,7 @@ function AllServices({ image }) {
           
                 
 
-     { Services.data != null && <List data={data} />}
+     { Services.data != null && <List data={Services.data} />}
                 
                
 
