@@ -9,7 +9,7 @@ export const Gallery = () => {
 
 
   useEffect(() => {
-console.log(Gallery.data)
+// console.log(Gallery.data)
   }, [Gallery])
 
 

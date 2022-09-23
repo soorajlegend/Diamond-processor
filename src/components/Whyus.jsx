@@ -32,7 +32,7 @@ const {  features } = Info()
 
 
 useEffect(() => {
-    console.log(features)
+    // console.log(features)
 }, [arabic, features]);
 
 

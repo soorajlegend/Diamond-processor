@@ -60,12 +60,12 @@ function WhyUs() {
                 Alert(response.message);
                 let newService = { id: response.id, title: title, description: description };
                 addFeature(newService);
-                console.log(features.data)
+                // console.log(features.data)
 
 
             } else {
                 // history.push('/')
-                console.log(response.message);
+                // console.log(response.message);
 
             }
         }

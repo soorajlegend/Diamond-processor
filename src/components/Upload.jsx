@@ -77,7 +77,7 @@ function Upload() {
             Alert('Uploaded successfully');
 
         }, (err) => {
-            console.log(err);;
+            // console.log(err);
         })
         // console.log(res);
     }

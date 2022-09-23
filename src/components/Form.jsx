@@ -40,7 +40,7 @@ function Form() {
             navigate('/controlpanel');
         } catch (e) {
             setError(e.message)
-            console.log(e.message);
+            // console.log(e.message)
         }
     }
 

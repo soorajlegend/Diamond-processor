@@ -31,7 +31,6 @@ function ServicesControl() {
 
     useEffect(() => {
         setData(Services.data);
-        console.log(Services.data)
     }, [Status, Services]);
     const dispatch = useDispatch();
 
@@ -47,7 +46,7 @@ function ServicesControl() {
 
         if (title.length < 1 || description.length < 1) {
 
-            console.log('all these field are required');
+            Alert('all these field are required');
 
         } else {
 
@@ -66,7 +65,7 @@ function ServicesControl() {
 
             } else {
                 // history.push('/')
-                console.log(response.message);
+                // console.log(response.message);
 
             }
         }

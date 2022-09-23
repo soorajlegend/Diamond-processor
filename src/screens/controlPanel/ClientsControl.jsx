@@ -65,7 +65,6 @@ function ClientControl() {
             data: formData
 
         }).then((res) => {
-            console.log(res.data)
             let response = res.data;
             Alert('Uploaded successfully');
             dispatch(setAlertStatus(true))
@@ -74,9 +73,8 @@ function ClientControl() {
             addClient(newClient);
 
         }, (err) => {
-            console.log(err);;
+            // console.log(err);
         })
-        // console.log(res);
     }
 
 

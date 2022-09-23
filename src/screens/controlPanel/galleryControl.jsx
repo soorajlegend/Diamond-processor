@@ -67,7 +67,6 @@ function GalleryControl() {
             data: formData
 
         }).then((res) => {
-            console.log(res.data)
             let response = res.data;
             Alert('Uploaded successfully');
             dispatch(setAlertStatus(true))
@@ -76,7 +75,7 @@ function GalleryControl() {
             addImage(newImage);
 
         }, (err) => {
-            console.log(err);;
+            // console.log(err);
         })
         // console.log(res);
     }

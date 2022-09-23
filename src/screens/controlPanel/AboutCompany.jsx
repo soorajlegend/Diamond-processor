@@ -33,7 +33,7 @@ function AboutCompany() {
         setDescription(info.data.description);
         setMission(info.data.mission);
         setVission(info.data.vission);
-        console.log(info)
+        // console.log(info)
     }, [Status,info])
 
 
@@ -58,10 +58,10 @@ function AboutCompany() {
         if (!response.error) {
             Alert(response.message);
             updateDesc(description,mission,vission);
-            console.log(info)
+            // console.log(info)
 
         } else {
-            console.log(response.message)
+            // console.log(response.message)
 
         }
     }

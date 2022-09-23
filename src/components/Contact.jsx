@@ -29,7 +29,7 @@ function ContactForm() {
     const { info } = Info();
 
     useEffect(() => {
-      console.log(info.data.Logo)
+    //   console.log(info.data.Logo)
     }, [info])
 
   return (

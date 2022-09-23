@@ -18,10 +18,10 @@ function SideBar() {
         try{
             await logout();
             navigate("/");
-            console.log('u\'re logged out')
-            console.log(user)
+            // console.log('u\'re logged out')
+            // console.log(user)
         } catch(e){
-            console.log(e.message)
+            // console.log(e.message)
         }
     }
 

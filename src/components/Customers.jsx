@@ -17,7 +17,7 @@ function Customers() {
 
 
   useEffect(() => {
-    console.log(Clients.data)
+    // console.log(Clients.data)
   }, [Clients])
 
 
