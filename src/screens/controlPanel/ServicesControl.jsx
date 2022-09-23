@@ -50,9 +50,9 @@ function ServicesControl() {
 
         } else {
 
-            let response = await fetch('http://localhost/dpAPI/api/services/create.php', {
+            let response = await fetch('https://biapay.000webhostapp.com/DP/api/services/create.php', {
                 method: 'POST',
-                headers: { "Content-Type": "application/json" },
+                // headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(info)
             });
             response = await response.json();
@@ -73,7 +73,7 @@ function ServicesControl() {
 
     const DeleteList =(e, url) => {
             fetch(url + e, {
-            method: "DELETE"
+            method: "POST"
         });
         RemoveService(e);
         Alert('Deleted successfully');
@@ -132,7 +132,7 @@ function ServicesControl() {
                             </div>
                         </section>
 
-                        {data != null && <List title="Our services" data={data} functions={DeleteList} DelUrl="http://localhost/dpAPI/api/services/delete.php?id=" />}
+                        {data != null && <List title="Our services" data={data} functions={DeleteList} DelUrl="https://biapay.000webhostapp.com/DP/api/services/delete.php?id=" />}
                     </div>
 
 

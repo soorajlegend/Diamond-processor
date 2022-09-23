@@ -47,7 +47,7 @@ function AllServices({ image }) {
 
 
         <div className={arabic ? "arabic-text mt-8 xl:mt-12 lg:flex md:flex md:flex-row-reverse lg:items-center" : "mt-8 xl:mt-12 lg:flex md:flex lg:items-center"}>
-            <div className="grid w-full grid-cols-1 gap-8 lg:w-1/2 xl:gap-16 md:grid-cols-2">
+            <div className=" w-full ">
 
           
                 

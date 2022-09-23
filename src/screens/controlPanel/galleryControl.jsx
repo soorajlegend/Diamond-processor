@@ -84,7 +84,7 @@ function GalleryControl() {
     const DeleteImage = (e, url) => {
         axios({
             url: url + e,
-            method: "DELETE",
+            method: "POST",
 
         }).then(() => {
 

@@ -10,7 +10,7 @@ function List({ data }) {
     // data.map((row) => (console.log(row.description)))
   return (
 
-    <div>
+    <div className="w-full grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 ">
           {data.map((row) => 
         
         <div key={row.id} className={arabic ? "arabic-text space-y-3 text-right" : "space-y-3 text-left"}>

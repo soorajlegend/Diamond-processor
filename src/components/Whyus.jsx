@@ -57,7 +57,7 @@ useEffect(() => {
                             <ul>
                                 {
                                 features.data != null && features.data.map((row) => 
-                                    <li key={row.id}>
+                                    <li className='py-5' key={row.id}>
                                     <div  className={arabic ? "arabic-text flex  flex-row-reverse" : "flex"}>
                                         <div className="flex-shrink-0">
                                             <div className="flex items-center justify-center h-12 w-12 rounded-full bg-gradient-to-b from-green-900 to-green-400 text-white shadow-lg animate-spin">
